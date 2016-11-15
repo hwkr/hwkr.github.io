@@ -1,8 +1,10 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import webpack from 'webpack';
 
-var LessPluginCleanCSS = require('less-plugin-clean-css');
-var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+const LessPluginCleanCSS = require('less-plugin-clean-css');
+const LessPluginAutoPrefix = require('less-plugin-autoprefix');
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const production = process.argv.indexOf('-p') !== -1;
 
@@ -22,24 +24,34 @@ export default {
       },
       {
         test: /\.less$/,
-        loaders: [
-          'file?name=styles.css', 'less'
-        ],
+        loader: ExtractTextPlugin.extract(
+          // activate source maps via loader query
+          'css?sourceMap!' +
+          `less?${production ? 'compress' : 'sourceMap'}`
+        ),
       },
     ],
   },
   lessLoader: {
-    lessPlugins: [
-      new LessPluginCleanCSS({ advanced: true, keepSpecialComments: 1 }),
-      new LessPluginAutoPrefix({ browsers: ["last 2 versions"] })
-    ]
+    lessPlugins: (() => {
+      if (production) {
+        return [
+          new LessPluginCleanCSS({ advanced: true, keepSpecialComments: 1 }),
+          new LessPluginAutoPrefix({ browsers: ['last 2 versions'] })
+        ];
+      }
+      return [];
+    })()
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: (() => {
-    if (production) {
-      return [
+    return [
+      new ExtractTextPlugin('styles.css'),
+    ].concat(
+      production ? [
+        // Production only plugins
         new webpack.DefinePlugin({
           'process.env': {
             NODE_ENV: JSON.stringify('production'),
@@ -56,8 +68,9 @@ export default {
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
-      ];
-    }
-    return [];
+      ] : [
+          // Development only plugins
+          /* Nothing */
+      ]);
   })(),
 };
