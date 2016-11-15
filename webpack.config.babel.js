@@ -1,6 +1,11 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import webpack from 'webpack';
 
+var LessPluginCleanCSS = require('less-plugin-clean-css');
+var LessPluginAutoPrefix = require('less-plugin-autoprefix');
+
+const production = process.argv.indexOf('-p') !== -1;
+
 export default {
   context: __dirname,
   entry: './index.jsx',
@@ -18,16 +23,22 @@ export default {
       {
         test: /\.less$/,
         loaders: [
-          'style', 'css', 'less',
+          'file?name=styles.css', 'less'
         ],
       },
     ],
+  },
+  lessLoader: {
+    lessPlugins: [
+      new LessPluginCleanCSS({ advanced: true, keepSpecialComments: 1 }),
+      new LessPluginAutoPrefix({browsers: ["last 2 versions"]})
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: (() => {
-    if (process.argv.indexOf('-p') !== -1) {
+    if (production) {
       return [
         new webpack.DefinePlugin({
           'process.env': {

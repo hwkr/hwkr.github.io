@@ -63,19 +63,19 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Home = __webpack_require__(/*! ./components/Home */ 274);
+	var _Home = __webpack_require__(/*! ./components/Home */ 271);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _PageNotFound = __webpack_require__(/*! ./components/PageNotFound */ 275);
+	var _PageNotFound = __webpack_require__(/*! ./components/PageNotFound */ 272);
 	
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 	
-	var _ExampleComponent = __webpack_require__(/*! ./components/ExampleComponent */ 276);
+	var _ExampleComponent = __webpack_require__(/*! ./components/ExampleComponent */ 273);
 	
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 	
-	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/ExampleTwoDeepComponent */ 277);
+	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/ExampleTwoDeepComponent */ 274);
 	
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 	
@@ -28685,361 +28685,10 @@
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(/*! !./../~/css-loader!./../~/less-loader!./main.less */ 271);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 273)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./main.less", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/less-loader/index.js!./main.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = __webpack_require__.p + "styles.css";
 
 /***/ },
 /* 271 */
-/*!*********************************************************!*\
-  !*** ./~/css-loader!./~/less-loader!./styles/main.less ***!
-  \*********************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 272)();
-	// imports
-	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);", ""]);
-	
-	// module
-	exports.push([module.id, "/*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */\n/**\n * 1. Change the default font family in all browsers (opinionated).\n * 2. Correct the line height in all browsers.\n * 3. Prevent adjustments of font size after orientation changes in IE and iOS.\n */\nhtml {\n  font-family: sans-serif;\n  /* 1 */\n  line-height: 1.15;\n  /* 2 */\n  -ms-text-size-adjust: 100%;\n  /* 3 */\n  -webkit-text-size-adjust: 100%;\n  /* 3 */\n}\n/**\n * Remove the margin in all browsers (opinionated).\n */\nbody {\n  margin: 0;\n}\n/* HTML5 display definitions\n   ========================================================================== */\n/**\n * Add the correct display in IE 9-.\n * 1. Add the correct display in Edge, IE, and Firefox.\n * 2. Add the correct display in IE.\n */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  /* 1 */\n  display: block;\n}\n/**\n * Add the correct display in IE 9-.\n */\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n}\n/**\n * Add the correct display in iOS 4-7.\n */\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline;\n}\n/**\n * Add the correct display in IE 10-.\n * 1. Add the correct display in IE.\n */\ntemplate,\n[hidden] {\n  display: none;\n}\n/* Links\n   ========================================================================== */\n/**\n * 1. Remove the gray background on active links in IE 10.\n * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.\n */\na {\n  background-color: transparent;\n  /* 1 */\n  -webkit-text-decoration-skip: objects;\n  /* 2 */\n}\n/**\n * Remove the outline on focused links when they are also active or hovered\n * in all browsers (opinionated).\n */\na:active,\na:hover {\n  outline-width: 0;\n}\n/* Text-level semantics\n   ========================================================================== */\n/**\n * 1. Remove the bottom border in Firefox 39-.\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline;\n  /* 2 */\n  text-decoration: underline dotted;\n  /* 2 */\n}\n/**\n * Prevent the duplicate application of `bolder` by the next rule in Safari 6.\n */\nb,\nstrong {\n  font-weight: inherit;\n}\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n}\n/**\n * Add the correct font style in Android 4.3-.\n */\ndfn {\n  font-style: italic;\n}\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n/**\n * Add the correct background and color in IE 9-.\n */\nmark {\n  background-color: #ff0;\n  color: #000;\n}\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%;\n}\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsub {\n  bottom: -0.25em;\n}\nsup {\n  top: -0.5em;\n}\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10-.\n */\nimg {\n  border-style: none;\n}\n/**\n * Hide the overflow in IE.\n */\nsvg:not(:root) {\n  overflow: hidden;\n}\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */\n}\n/**\n * Add the correct margin in IE 8.\n */\nfigure {\n  margin: 1em 40px;\n}\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */\n}\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change font properties to `inherit` in all browsers (opinionated).\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font: inherit;\n  /* 1 */\n  margin: 0;\n  /* 2 */\n}\n/**\n * Restore the font weight unset by the previous rule.\n */\noptgroup {\n  font-weight: bold;\n}\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  /* 1 */\n  overflow: visible;\n}\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  /* 1 */\n  text-transform: none;\n}\n/**\n * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`\n *    controls in Android 4.\n * 2. Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\nhtml [type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button;\n  /* 2 */\n}\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0;\n}\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText;\n}\n/**\n * Change the border, margin, and padding in all browsers (opinionated).\n */\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */\n}\n/**\n * Remove the default vertical scrollbar in IE.\n */\ntextarea {\n  overflow: auto;\n}\n/**\n * 1. Add the correct box sizing in IE 10-.\n * 2. Remove the padding in IE 10-.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */\n}\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */\n}\n/**\n * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.\n */\n[type=\"search\"]::-webkit-search-cancel-button,\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n/**\n * Correct the text style of placeholders in Chrome, Edge, and Safari.\n */\n::-webkit-input-placeholder {\n  color: inherit;\n  opacity: 0.54;\n}\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */\n}\n@keyframes loading {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n@keyframes slide-down {\n  0% {\n    margin-top: -3rem;\n    opacity: 0;\n  }\n  100% {\n    margin-top: 0;\n    opacity: 1;\n  }\n}\n.file-icon {\n  background: transparent;\n  border-color: #c5c5c5;\n  border-radius: .2rem;\n  border-style: solid;\n  border-width: 0 0 2.2rem 1.4rem;\n  display: inline-block;\n  height: 3.2rem;\n  position: relative;\n  text-align: left;\n  width: 2.4rem;\n  zoom: 1;\n}\n.file-icon::before,\n.file-icon::after {\n  background: transparent;\n  border: 0.5rem solid #c5c5c5;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  height: 1rem;\n  position: absolute;\n  right: 0;\n  top: 0;\n  width: 1rem;\n  z-index: 2;\n}\n.file-icon::after {\n  border-bottom-left-radius: .2rem;\n  border-color: rgba(255, 255, 255, 0.5);\n  color: #fff;\n  content: attr(data-type);\n  font-size: 1rem;\n  line-height: 3.6rem;\n  text-indent: -1.6rem;\n  z-index: 3;\n}\n.file-icon.file-icon-xs {\n  border-width: 0 0 1.2rem .8rem;\n  height: 1.6rem;\n  width: 1.2rem;\n}\n.file-icon.file-icon-xs::before,\n.file-icon.file-icon-xs::after {\n  border-width: .2rem;\n  height: .4rem;\n  width: .4rem;\n}\n.file-icon.file-icon-xs::after {\n  border-radius: .1rem;\n  content: \"--\";\n  font-size: .8rem;\n  line-height: 1.6rem;\n  text-indent: -0.8rem;\n}\n.file-icon.file-icon-sm {\n  border-width: 0 0 1.6rem 1rem;\n  height: 2.4rem;\n  width: 1.8rem;\n}\n.file-icon.file-icon-sm::before,\n.file-icon.file-icon-sm::after {\n  border-width: .4rem;\n  height: .8rem;\n  width: .8rem;\n}\n.file-icon.file-icon-sm::after {\n  font-size: .8rem;\n  line-height: 2.6rem;\n  text-indent: -1.2rem;\n}\n.file-icon.file-icon-lg {\n  border-width: 0 0 3.4rem 2.2rem;\n  height: 4.8rem;\n  width: 3.6rem;\n}\n.file-icon.file-icon-lg::before,\n.file-icon.file-icon-lg::after {\n  border-width: .7rem;\n  height: 1.4rem;\n  width: 1.4rem;\n}\n.file-icon.file-icon-lg::after {\n  font-size: 1.2rem;\n  line-height: 6.2rem;\n  text-indent: -2.6rem;\n}\n.file-icon.file-icon-xl {\n  border-radius: .3rem;\n  border-width: 0 0 4.6rem 3rem;\n  height: 6.4rem;\n  width: 4.8rem;\n}\n.file-icon.file-icon-xl::before,\n.file-icon.file-icon-xl::after {\n  border-width: .9rem;\n  height: 1.8rem;\n  width: 1.8rem;\n}\n.file-icon.file-icon-xl::after {\n  font-size: 1.4rem;\n  line-height: 8.8rem;\n  text-indent: -3.4rem;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  color: inherit;\n  font-weight: 300;\n  line-height: 1.1;\n  margin-bottom: 1.5rem;\n  margin-top: 2.5rem;\n}\nh1 {\n  font-size: 5rem;\n}\nh2 {\n  font-size: 4rem;\n}\nh3 {\n  font-size: 3rem;\n}\nh4 {\n  font-size: 2.4rem;\n}\nh5 {\n  font-size: 2rem;\n}\nh6 {\n  font-size: 1.6rem;\n}\np {\n  margin: 0 0 1rem;\n}\nblockquote {\n  border-left: .2rem solid #ddd;\n  margin-left: 0;\n  padding: 1rem 2rem;\n}\nblockquote p:last-child {\n  margin-bottom: 0;\n}\nblockquote cite {\n  color: #b3b3b3;\n}\nul,\nol {\n  margin: 2rem 0 2rem 2rem;\n  padding: 0;\n}\nul ul,\nol ul,\nul ol,\nol ol {\n  margin: 1.5rem 0 1.5rem 2rem;\n}\nul li,\nol li {\n  margin-top: 1rem;\n}\nul {\n  list-style: disc inside;\n}\nul ul {\n  list-style-type: circle;\n}\nol {\n  list-style: decimal inside;\n}\nol ol {\n  list-style-type: lower-alpha;\n}\ndl dt {\n  font-weight: bold;\n}\ndl dd {\n  margin: .5rem 0 1.5rem 0;\n}\n.lead {\n  font-size: 120%;\n}\nmark,\n.highlight {\n  background: #ffe5a3;\n  border-radius: .2rem;\n  display: inline;\n  font-size: 1em;\n  padding: .1em .3em;\n  vertical-align: baseline;\n}\npre {\n  background: #f9f9f9;\n  border-left: 0.2rem solid #e2e2e2;\n  line-height: 1.8rem;\n  margin-bottom: 1em;\n  margin-top: 1em;\n  overflow: auto;\n  padding: 1.5rem 2.5rem;\n}\ncode {\n  background: #efefef;\n  border-radius: .2rem;\n  display: inline;\n  font-size: 1em;\n  padding: .1em .3em;\n  vertical-align: baseline;\n  white-space: nowrap;\n}\npre code {\n  background: transparent;\n  border-left: 0;\n  line-height: 1.8rem;\n  margin-bottom: 0;\n  margin-top: 0;\n}\n.clearfix::after,\n.container::after {\n  clear: both;\n  content: \"\";\n  display: table;\n}\n.float-left {\n  float: left !important;\n}\n.float-right {\n  float: right !important;\n}\n.rel {\n  position: relative;\n}\n.abs {\n  position: absolute;\n}\n.fixed {\n  position: fixed;\n}\n.centered {\n  display: block;\n  float: none;\n  margin-left: auto;\n  margin-right: auto;\n}\n.mt-10 {\n  margin-top: 1rem;\n}\n.mr-10 {\n  margin-right: 1rem;\n}\n.mb-10 {\n  margin-bottom: 1rem;\n}\n.ml-10 {\n  margin-left: 1rem;\n}\n.mt-5 {\n  margin-top: .5rem;\n}\n.mr-5 {\n  margin-right: .5rem;\n}\n.mb-5 {\n  margin-bottom: .5rem;\n}\n.ml-5 {\n  margin-left: .5rem;\n}\n.pt-10 {\n  padding-top: 1rem;\n}\n.pr-10 {\n  padding-right: 1rem;\n}\n.pb-10 {\n  padding-bottom: 1rem;\n}\n.pl-10 {\n  padding-left: 1rem;\n}\n.pt-5 {\n  padding-top: .5rem;\n}\n.pr-5 {\n  padding-right: .5rem;\n}\n.pb-5 {\n  padding-bottom: .5rem;\n}\n.pl-5 {\n  padding-left: .5rem;\n}\n.block {\n  display: block;\n}\n.inline {\n  display: inline;\n}\n.inline-block {\n  display: inline-block;\n}\n.flex {\n  display: flex;\n}\n.inline-flex {\n  display: inline-flex;\n}\n.hide {\n  display: none !important;\n}\n.visible {\n  visibility: visible;\n}\n.invisible {\n  visibility: hidden;\n}\n.text-hide {\n  background: transparent;\n  border: 0;\n  color: transparent;\n  font: 0/0 a;\n  text-shadow: none;\n}\n.text-left {\n  text-align: left;\n}\n.text-right {\n  text-align: right;\n}\n.text-center {\n  text-align: center;\n}\n.text-justify {\n  text-align: justify;\n}\n.text-lowercase {\n  text-transform: lowercase;\n}\n.text-uppercase {\n  text-transform: uppercase;\n}\n.text-capitalize {\n  text-transform: capitalize;\n}\n.text-normal {\n  font-weight: normal;\n}\n.text-bold {\n  font-weight: bold;\n}\n.text-italic {\n  font-style: italic;\n}\n.text-ellipsis {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.text-clip {\n  overflow: hidden;\n  text-overflow: clip;\n  white-space: nowrap;\n}\n.text-break {\n  hyphens: auto;\n  word-break: break-word;\n  word-wrap: break-word;\n}\n.hand {\n  cursor: pointer;\n}\n.shadow {\n  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);\n}\n.light-shadow {\n  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);\n}\n.rounded {\n  border-radius: .3rem;\n}\n.circle {\n  border-radius: 50%;\n}\n.divider {\n  border-bottom: 0.1rem solid #efefef;\n  display: block;\n  margin: .5rem;\n}\n.loading {\n  color: transparent !important;\n  min-height: 1.6rem;\n  pointer-events: none;\n  position: relative;\n}\n.loading::after {\n  animation: loading 500ms infinite linear;\n  border: 0.2rem solid #5764c6;\n  border-radius: .8rem;\n  border-right-color: transparent;\n  border-top-color: transparent;\n  content: \"\";\n  display: block;\n  height: 1.6rem;\n  left: 50%;\n  margin-left: -0.8rem;\n  margin-top: -0.8rem;\n  position: absolute;\n  top: 50%;\n  width: 1.6rem;\n}\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}\nhtml {\n  box-sizing: border-box;\n  font-size: 10px;\n  line-height: 1.42857143;\n  -webkit-tap-highlight-color: transparent;\n}\nbody {\n  background: #fff;\n  color: #333;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Ubuntu, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", \"Hiragino Kaku Gothic Pro\", Meiryo, \"Malgun Gothic\", \"Helvetica Neue\", sans-serif;\n  font-size: 1.4rem;\n  overflow-x: hidden;\n}\na {\n  color: #5764c6;\n  text-decoration: underline;\n}\na:focus,\na:hover {\n  color: #283176;\n}\n[disabled],\n.disabled {\n  cursor: default;\n  opacity: .75;\n  pointer-events: none;\n}\n.btn .icon,\n.toast .icon,\n.menu .icon {\n  font-size: 1.3333em;\n  line-height: .8em;\n  margin-right: .2rem;\n  vertical-align: -20%;\n}\n.container {\n  margin-left: auto;\n  margin-right: auto;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  width: 100%;\n}\n@media screen and (min-width: 980px) {\n  .grid-960 {\n    width: 98rem;\n  }\n}\n@media screen and (min-width: 500px) {\n  .grid-480 {\n    width: 50rem;\n  }\n}\n.columns {\n  display: flex;\n  flex-wrap: wrap;\n  margin-left: -1rem;\n  margin-right: -1rem;\n}\n.columns.col-gapless {\n  margin-left: 0;\n  margin-right: 0;\n}\n.columns.col-gapless .column {\n  padding-left: 0;\n  padding-right: 0;\n}\n.columns.col-oneline {\n  flex-wrap: nowrap;\n  overflow-x: auto;\n}\n.column {\n  flex: 1;\n  padding: 1rem;\n}\n.column.col-12,\n.column.col-11,\n.column.col-10,\n.column.col-9,\n.column.col-8,\n.column.col-7,\n.column.col-6,\n.column.col-5,\n.column.col-4,\n.column.col-3,\n.column.col-2,\n.column.col-1 {\n  flex: none;\n}\n.col-12 {\n  width: 100%;\n}\n.col-11 {\n  width: 91.66666667%;\n}\n.col-10 {\n  width: 83.33333333%;\n}\n.col-9 {\n  width: 75%;\n}\n.col-8 {\n  width: 66.66666667%;\n}\n.col-7 {\n  width: 58.33333333%;\n}\n.col-6 {\n  width: 50%;\n}\n.col-5 {\n  width: 41.66666667%;\n}\n.col-4 {\n  width: 33.33333333%;\n}\n.col-3 {\n  width: 25%;\n}\n.col-2 {\n  width: 16.66666667%;\n}\n.col-1 {\n  width: 8.33333333%;\n}\n@media screen and (max-width: 960px) {\n  .col-lg-12,\n  .col-lg-11,\n  .col-lg-10,\n  .col-lg-9,\n  .col-lg-8,\n  .col-lg-7,\n  .col-lg-6,\n  .col-lg-5,\n  .col-lg-4,\n  .col-lg-3,\n  .col-lg-2,\n  .col-lg-1 {\n    flex: none;\n  }\n  .col-lg-12 {\n    width: 100%;\n  }\n  .col-lg-11 {\n    width: 91.66666667%;\n  }\n  .col-lg-10 {\n    width: 83.33333333%;\n  }\n  .col-lg-9 {\n    width: 75%;\n  }\n  .col-lg-8 {\n    width: 66.66666667%;\n  }\n  .col-lg-7 {\n    width: 58.33333333%;\n  }\n  .col-lg-6 {\n    width: 50%;\n  }\n  .col-lg-5 {\n    width: 41.66666667%;\n  }\n  .col-lg-4 {\n    width: 33.33333333%;\n  }\n  .col-lg-3 {\n    width: 25%;\n  }\n  .col-lg-2 {\n    width: 16.66666667%;\n  }\n  .col-lg-1 {\n    width: 8.33333333%;\n  }\n}\n@media screen and (max-width: 840px) {\n  .col-md-12,\n  .col-md-11,\n  .col-md-10,\n  .col-md-9,\n  .col-md-8,\n  .col-md-7,\n  .col-md-6,\n  .col-md-5,\n  .col-md-4,\n  .col-md-3,\n  .col-md-2,\n  .col-md-1 {\n    flex: none;\n  }\n  .col-md-12 {\n    width: 100%;\n  }\n  .col-md-11 {\n    width: 91.66666667%;\n  }\n  .col-md-10 {\n    width: 83.33333333%;\n  }\n  .col-md-9 {\n    width: 75%;\n  }\n  .col-md-8 {\n    width: 66.66666667%;\n  }\n  .col-md-7 {\n    width: 58.33333333%;\n  }\n  .col-md-6 {\n    width: 50%;\n  }\n  .col-md-5 {\n    width: 41.66666667%;\n  }\n  .col-md-4 {\n    width: 33.33333333%;\n  }\n  .col-md-3 {\n    width: 25%;\n  }\n  .col-md-2 {\n    width: 16.66666667%;\n  }\n  .col-md-1 {\n    width: 8.33333333%;\n  }\n}\n@media screen and (max-width: 600px) {\n  .col-sm-12,\n  .col-sm-11,\n  .col-sm-10,\n  .col-sm-9,\n  .col-sm-8,\n  .col-sm-7,\n  .col-sm-6,\n  .col-sm-5,\n  .col-sm-4,\n  .col-sm-3,\n  .col-sm-2,\n  .col-sm-1 {\n    flex: none;\n  }\n  .col-sm-12 {\n    width: 100%;\n  }\n  .col-sm-11 {\n    width: 91.66666667%;\n  }\n  .col-sm-10 {\n    width: 83.33333333%;\n  }\n  .col-sm-9 {\n    width: 75%;\n  }\n  .col-sm-8 {\n    width: 66.66666667%;\n  }\n  .col-sm-7 {\n    width: 58.33333333%;\n  }\n  .col-sm-6 {\n    width: 50%;\n  }\n  .col-sm-5 {\n    width: 41.66666667%;\n  }\n  .col-sm-4 {\n    width: 33.33333333%;\n  }\n  .col-sm-3 {\n    width: 25%;\n  }\n  .col-sm-2 {\n    width: 16.66666667%;\n  }\n  .col-sm-1 {\n    width: 8.33333333%;\n  }\n}\n@media screen and (max-width: 480px) {\n  .col-xs-12,\n  .col-xs-11,\n  .col-xs-10,\n  .col-xs-9,\n  .col-xs-8,\n  .col-xs-7,\n  .col-xs-6,\n  .col-xs-5,\n  .col-xs-4,\n  .col-xs-3,\n  .col-xs-2,\n  .col-xs-1 {\n    flex: none;\n  }\n  .col-xs-12 {\n    width: 100%;\n  }\n  .col-xs-11 {\n    width: 91.66666667%;\n  }\n  .col-xs-10 {\n    width: 83.33333333%;\n  }\n  .col-xs-9 {\n    width: 75%;\n  }\n  .col-xs-8 {\n    width: 66.66666667%;\n  }\n  .col-xs-7 {\n    width: 58.33333333%;\n  }\n  .col-xs-6 {\n    width: 50%;\n  }\n  .col-xs-5 {\n    width: 41.66666667%;\n  }\n  .col-xs-4 {\n    width: 33.33333333%;\n  }\n  .col-xs-3 {\n    width: 25%;\n  }\n  .col-xs-2 {\n    width: 16.66666667%;\n  }\n  .col-xs-1 {\n    width: 8.33333333%;\n  }\n}\n.form-horizontal {\n  padding: 1rem;\n}\n.form-horizontal .form-group {\n  display: flex;\n}\n.form-horizontal .form-label {\n  padding: .8rem .4rem;\n  margin-bottom: 0;\n}\n.form-horizontal .form-checkbox,\n.form-horizontal .form-radio {\n  margin: .5rem 0;\n}\n@media screen and (max-width: 480px) {\n  .hide-xs {\n    display: none !important;\n  }\n}\n@media screen and (max-width: 600px) {\n  .hide-sm {\n    display: none !important;\n  }\n}\n@media screen and (max-width: 840px) {\n  .hide-md {\n    display: none !important;\n  }\n}\n@media screen and (max-width: 960px) {\n  .hide-lg {\n    display: none !important;\n  }\n}\n@media screen and (max-width: 1280px) {\n  .hide-xl {\n    display: none !important;\n  }\n}\n.form-autocomplete {\n  position: relative;\n}\n.form-autocomplete .form-autocomplete-input {\n  background: #fff;\n  border: 0.1rem solid #c5c5c5;\n  border-radius: .3rem;\n  color: #333;\n  display: block;\n  font-size: 1.4rem;\n  line-height: 1.6rem;\n  max-width: 100%;\n  min-height: 3.2rem;\n  outline: 0;\n  padding: .3rem .3rem 0 .3rem;\n  width: 100%;\n}\n.form-autocomplete .form-autocomplete-input .chip-sm {\n  margin-bottom: .3rem;\n}\n.form-autocomplete .form-autocomplete-input .form-input {\n  background: #fff;\n  border-color: transparent;\n  display: inline-block;\n  height: 2.4rem;\n  margin-bottom: .3rem;\n  padding: .3rem;\n  vertical-align: top;\n  width: auto;\n}\n.form-autocomplete .form-autocomplete-list {\n  background: #fff;\n  border: 0.1rem solid #d2d2d2;\n  border-radius: .3rem;\n  display: block;\n  height: auto;\n  left: 0;\n  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.15);\n  margin: .3rem 0 0 0;\n  padding: .5rem;\n  position: absolute;\n  top: 100%;\n  width: 100%;\n  z-index: 1988;\n}\n.form-autocomplete .form-autocomplete-item {\n  border-radius: .3rem;\n  display: block;\n  margin-top: .1rem;\n  padding: .2rem 1rem;\n}\n.form-autocomplete .form-autocomplete-item:hover,\n.form-autocomplete .form-autocomplete-item:focus {\n  background: #ffffff;\n}\n.form-autocomplete .form-autocomplete-item.active {\n  background: #eff1fa;\n}\n.avatar {\n  border-radius: 50%;\n  display: inline-block;\n  font-size: 1.4rem;\n  font-weight: 300;\n  height: 3.2rem;\n  line-height: 1;\n  margin: 0;\n  position: relative;\n  vertical-align: middle;\n  width: 3.2rem;\n}\n.avatar.avatar-xs {\n  font-size: .8rem;\n  height: 1.6rem;\n  width: 1.6rem;\n}\n.avatar.avatar-sm {\n  font-size: 1rem;\n  height: 2.4rem;\n  width: 2.4rem;\n}\n.avatar.avatar-lg {\n  font-size: 2rem;\n  height: 4.8rem;\n  width: 4.8rem;\n}\n.avatar.avatar-xl {\n  font-size: 2.6rem;\n  height: 6.4rem;\n  width: 6.4rem;\n}\n.avatar img {\n  border-radius: 50%;\n  height: 100%;\n  position: relative;\n  width: 100%;\n  z-index: 99;\n}\n.avatar .avatar-icon {\n  background: #fff;\n  bottom: -0.2em;\n  height: 50%;\n  padding: 5%;\n  position: absolute;\n  right: -0.2em;\n  width: 50%;\n}\n.avatar[data-initial]::after {\n  color: #fff;\n  content: attr(data-initial);\n  left: 50%;\n  position: absolute;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  z-index: 0;\n}\n.badge {\n  position: relative;\n}\n.badge[data-badge]::after {\n  background: #5764c6;\n  background-clip: padding-box;\n  border: .1rem solid #fff;\n  border-radius: 1rem;\n  color: #fff;\n  content: attr(data-badge);\n  display: inline-block;\n  font-size: 1.1rem;\n  height: 1.8rem;\n  line-height: 1.2rem;\n  min-width: 1.8rem;\n  padding: .2rem .5rem;\n  text-align: center;\n  transform: translate(-0.2rem, -0.8rem);\n  white-space: nowrap;\n}\n.btn {\n  -webkit-appearance: none;\n  background: #fff;\n  border: 0.1rem solid #5764c6;\n  border-radius: .3rem;\n  color: #5764c6;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 1.4rem;\n  height: 3.2rem;\n  line-height: 1.6rem;\n  outline: 0;\n  padding: .7rem 1.5rem;\n  text-align: center;\n  text-decoration: none;\n  user-select: none;\n  vertical-align: middle;\n  white-space: nowrap;\n}\n.btn:focus {\n  background: #f3f4fb;\n}\n.btn:hover {\n  background: #5764c6;\n  border-color: #4452c0;\n  color: #fff;\n}\n.btn:active,\n.btn.active {\n  background: #4452c0;\n  border-color: #3b49af;\n  color: #fff;\n}\n.btn.btn-primary {\n  background: #5764c6;\n  border-color: #4452c0;\n  color: #fff;\n}\n.btn.btn-primary:focus {\n  background: #4856c1;\n  border-color: #3b49af;\n  color: #fff;\n}\n.btn.btn-primary:hover {\n  background: #404fbe;\n  border-color: #35419c;\n  color: #fff;\n}\n.btn.btn-primary:active,\n.btn.btn-primary.active {\n  background: #3e4cb6;\n  border-color: #35419c;\n  color: #fff;\n}\n.btn.btn-primary.loading::after {\n  border-color: #fff;\n  border-right-color: transparent;\n  border-top-color: transparent;\n}\n.btn.btn-link {\n  background: transparent;\n  border-color: transparent;\n  color: #5764c6;\n}\n.btn.btn-link:focus,\n.btn.btn-link:hover {\n  background: #f4f4f4;\n  color: #35419c;\n}\n.btn.btn-link:active,\n.btn.btn-link.active {\n  background: #efefef;\n  color: #283176;\n}\n.btn.btn-sm {\n  border-radius: .2rem;\n  font-size: 1.2rem;\n  height: 2.4rem;\n  line-height: 1.4rem;\n  padding: .4rem 1rem;\n}\n.btn.btn-lg {\n  border-radius: .4rem;\n  font-size: 1.8rem;\n  height: 4.2rem;\n  line-height: 2rem;\n  padding: 1rem 1.8rem;\n}\n.btn.btn-block {\n  display: block;\n  width: 100%;\n}\n.btn.btn-clear {\n  background: transparent;\n  border: 0;\n  color: #666;\n  height: 2rem;\n  margin-left: .3rem;\n  opacity: .45;\n  padding: 0;\n}\n.btn.btn-clear:hover {\n  opacity: .85;\n}\n.btn.btn-clear::before {\n  content: '\\D7';\n  font-size: 2rem;\n}\n.btn-group {\n  display: inline-flex;\n  flex-wrap: nowrap;\n  max-width: 100%;\n  overflow-x: auto;\n}\n.btn-group .btn {\n  flex: 1 0 auto;\n}\n.btn-group .btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group .btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n  margin-left: -0.1rem;\n}\n.btn-group .btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  margin-left: -0.1rem;\n}\n.btn-group .btn:hover,\n.btn-group .btn:focus,\n.btn-group .btn:active,\n.btn-group .btn.active {\n  z-index: 99;\n}\n.btn-group.btn-group-block {\n  display: flex;\n}\n.card {\n  background: #fff;\n  border: 0.1rem solid #efefef;\n  border-radius: .3rem;\n  display: block;\n  margin: 0;\n  padding: 0;\n  text-align: left;\n  z-index: 999;\n}\n.card .card-header,\n.card .card-body,\n.card .card-footer {\n  padding: 1.5rem 1.5rem 0 1.5rem;\n}\n.card .card-header:last-child,\n.card .card-body:last-child,\n.card .card-footer:last-child {\n  padding-bottom: 1.5rem;\n}\n.card .card-image {\n  padding-top: 1.5rem;\n}\n.card .card-image:first-child {\n  padding-top: 0;\n}\n.card .card-image:first-child img {\n  border-top-left-radius: .3rem;\n  border-top-right-radius: .3rem;\n}\n.card .card-image:last-child img {\n  border-bottom-left-radius: .3rem;\n  border-bottom-right-radius: .3rem;\n}\n.card .card-title {\n  font-size: 1.4em;\n  line-height: 1;\n  margin-bottom: .5rem;\n  margin-top: 0;\n}\n.card .card-meta {\n  color: #b3b3b3;\n  font-size: 1em;\n  margin-bottom: 0;\n  margin-top: 0;\n}\n.chip {\n  align-content: space-around;\n  align-items: center;\n  border: .1rem solid transparent;\n  border-radius: .3rem;\n  display: flex;\n  list-style: none;\n  margin: 0;\n  padding: .5rem 0;\n}\n.chip .chip-icon {\n  flex: 0 0 auto;\n}\n.chip .chip-content {\n  flex: 1 1 auto;\n  padding: 0 1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.chip .chip-action {\n  flex: 0 0 auto;\n}\n.chip .chip-title {\n  font-size: 1.4rem;\n}\n.chip .chip-meta {\n  color: #b3b3b3;\n  font-size: 1.2rem;\n}\n.chip-sm {\n  align-items: center;\n  background: #eff1fa;\n  border-radius: .3rem;\n  color: #666;\n  display: inline-flex;\n  font-size: 1.2rem;\n  height: 2.4rem;\n  max-width: 100%;\n  padding: .3rem .6rem;\n  text-decoration: none;\n  vertical-align: middle;\n}\n.chip-sm:hover,\n.chip-sm:focus {\n  background: #e8eaf7;\n}\n.chip-sm .btn-clear {\n  margin-top: -0.2rem;\n}\n.chip-sm .btn-clear::before {\n  color: #3b49af;\n  font-size: 1.6rem;\n}\n.chip-sm.selected {\n  background: #5764c6;\n  color: #fff;\n}\n.chip-sm.selected .btn-clear::before {\n  color: #eff1fa;\n}\n.chip-sm .chip-name {\n  margin-left: .4rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.chip-sm .avatar {\n  font-size: .8rem;\n  height: 1.6rem;\n  width: 1.6rem;\n}\n.empty {\n  background: #f8f8f8;\n  border-radius: .3rem;\n  text-align: center;\n  padding: 4rem;\n}\n.empty .empty-title {\n  font-size: 1.8rem;\n  margin: 1.5rem 0 .5rem 0;\n}\n.empty .empty-meta {\n  color: #888;\n}\n.empty .empty-action {\n  margin-top: 1.5rem;\n}\n.form-group:not(:last-child) {\n  margin-bottom: 1rem;\n}\n.form-input {\n  -webkit-appearance: none;\n  background: #fff;\n  background-image: none;\n  border: 0.1rem solid #c5c5c5;\n  border-radius: .3rem;\n  color: #333;\n  display: block;\n  font-size: 1.4rem;\n  height: 3.2rem;\n  line-height: 1.6rem;\n  max-width: 100%;\n  outline: 0;\n  padding: .7rem .8rem;\n  position: relative;\n  width: 100%;\n}\n.form-input:focus {\n  border-color: #5764c6;\n}\n.form-input[disabled] {\n  background: #eeeff2;\n}\n.form-input.input-sm {\n  border-radius: .2rem;\n  font-size: 1.2rem;\n  height: 2.4rem;\n  padding: .3rem .6rem;\n}\n.form-input.input-lg {\n  border-radius: .4rem;\n  font-size: 1.6rem;\n  height: 4.2rem;\n  line-height: 2rem;\n  padding: 1rem .8rem;\n}\n.form-input.input-inline {\n  display: inline-block;\n  vertical-align: middle;\n  width: auto;\n}\ntextarea.form-input {\n  height: auto;\n  line-height: 2rem;\n}\n.has-success .form-input,\n.form-input.is-success {\n  border-color: #32b643;\n}\n.has-danger .form-input,\n.form-input.is-danger {\n  border-color: #e85600;\n}\n.form-input-hint {\n  color: #888;\n  display: inline-block;\n  margin-top: .4rem;\n}\n.has-success .form-input-hint,\n.is-success + .form-input-hint {\n  color: #32b643;\n}\n.has-danger .form-input-hint,\n.is-danger + .form-input-hint {\n  color: #e85600;\n}\n.form-label {\n  display: block;\n  line-height: 1.6rem;\n  margin-bottom: .5rem;\n}\n.form-select {\n  appearance: none;\n  border: 0.1rem solid #c5c5c5;\n  border-radius: .3rem;\n  font-size: 1.4rem;\n  line-height: 1.6rem;\n  outline: 0;\n  padding: .5rem .8rem;\n  vertical-align: middle;\n}\n.form-select:not([multiple]) {\n  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAMAAACzvE1FAAAADFBMVEUzMzMzMzMzMzMzMzMKAG/3AAAAA3RSTlMAf4C/aSLHAAAAPElEQVR42q3NMQ4AIAgEQTn//2cLdRKppSGzBYwzVXvznNWs8C58CiussPJj8h6NwgorrKRdTvuV9v16Afn0AYFOB7aYAAAAAElFTkSuQmCC) no-repeat right 0.75rem center / 0.8rem 1rem;\n  height: 3.2rem;\n  padding-right: 2.4rem;\n}\n.form-select:focus {\n  border-color: #5764c6;\n}\n.form-select::-ms-expand {\n  display: none;\n}\n.form-select.select-sm {\n  border-radius: .2rem;\n  font-size: 1.2rem;\n  height: 2.4rem;\n  padding: .4rem 2rem .4rem .6rem;\n}\n.form-select.select-lg {\n  font-size: 1.6rem;\n  height: 4.2rem;\n  line-height: 2rem;\n  padding: 1rem 2.4rem 1rem .8rem;\n}\n.form-checkbox input,\n.form-radio input,\n.form-switch input {\n  clip: rect(0, 0, 0, 0);\n  height: .1rem;\n  margin: -0.1rem;\n  overflow: hidden;\n  position: absolute;\n  width: .1rem;\n}\n.form-checkbox,\n.form-radio {\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1.8rem;\n  padding: .3rem 2rem;\n  position: relative;\n}\n.form-checkbox .form-icon,\n.form-radio .form-icon {\n  border: 0.1rem solid #c5c5c5;\n  display: inline-block;\n  font-size: 1.4rem;\n  height: 1.4rem;\n  left: 0;\n  line-height: 2.4rem;\n  outline: none;\n  padding: 0;\n  position: absolute;\n  top: .5rem;\n  transition: all .15s ease;\n  vertical-align: top;\n  width: 1.4rem;\n}\n.form-checkbox:hover .form-icon,\n.form-radio:hover .form-icon {\n  border-color: #929292;\n}\n.form-checkbox input:focus + .form-icon,\n.form-radio input:focus + .form-icon {\n  border-color: #5764c6;\n}\n.form-checkbox input:checked + .form-icon,\n.form-radio input:checked + .form-icon {\n  background: #5764c6;\n  border-color: #5764c6;\n}\n.form-checkbox input:active + .form-icon,\n.form-radio input:active + .form-icon {\n  background: #efefef;\n}\n.form-checkbox .form-icon {\n  border-radius: .2rem;\n}\n.form-checkbox input:checked + .form-icon::after {\n  background-clip: padding-box;\n  border: .2rem solid #fff;\n  border-left-width: 0;\n  border-top-width: 0;\n  content: \"\";\n  height: 1rem;\n  left: 50%;\n  margin-left: -0.3rem;\n  margin-top: -0.6rem;\n  position: absolute;\n  top: 50%;\n  transform: rotate(45deg);\n  width: .6rem;\n}\n.form-checkbox input:indeterminate + .form-icon {\n  background: #5764c6;\n  border-color: #5764c6;\n}\n.form-checkbox input:indeterminate + .form-icon::after {\n  background: #fff;\n  content: \"\";\n  height: .2rem;\n  left: 50%;\n  margin-left: -0.4rem;\n  margin-top: -0.1rem;\n  position: absolute;\n  top: 50%;\n  width: .8rem;\n}\n.form-radio .form-icon {\n  border-radius: .7rem;\n}\n.form-radio input:checked + .form-icon::after {\n  background: #fff;\n  border-radius: .2rem;\n  content: \"\";\n  height: .4rem;\n  left: 50%;\n  margin-left: -0.2rem;\n  margin-top: -0.2rem;\n  position: absolute;\n  top: 50%;\n  width: .4rem;\n}\n.form-switch {\n  cursor: pointer;\n  display: inline-block;\n  line-height: 2rem;\n  padding: .3rem 2rem .3rem 3.6rem;\n  position: relative;\n}\n.form-switch .form-icon {\n  background: #c5c5c5;\n  background-clip: padding-box;\n  border: 0.1rem solid #c5c5c5;\n  border-radius: .9rem;\n  display: inline-block;\n  height: 1.8rem;\n  left: 0;\n  line-height: 2.6rem;\n  outline: none;\n  padding: 0;\n  position: absolute;\n  top: .4rem;\n  vertical-align: top;\n  width: 3rem;\n}\n.form-switch .form-icon::after {\n  background: #fff;\n  border-radius: .8rem;\n  content: \"\";\n  display: block;\n  height: 1.6rem;\n  left: 0;\n  position: absolute;\n  top: 0;\n  transition: left .15s ease;\n  width: 1.6rem;\n}\n.form-switch input:checked + .form-icon {\n  background: #5764c6;\n  border-color: #5764c6;\n}\n.form-switch input:checked + .form-icon::after {\n  left: 1.2rem;\n}\n.form-switch input:active + .form-icon::after {\n  background: #efefef;\n}\n.input-group {\n  display: flex;\n}\n.input-group .input-group-addon {\n  background: #f9f9f9;\n  border: 0.1rem solid #c5c5c5;\n  border-radius: .3rem;\n  line-height: 1.6rem;\n  padding: .7rem .8rem;\n}\n.input-group .input-group-addon.addon-sm {\n  font-size: 1.2rem;\n  padding: .3rem .6rem;\n}\n.input-group .input-group-addon.addon-lg {\n  font-size: 1.6rem;\n  line-height: 2rem;\n  padding: 1rem .8rem;\n}\n.input-group .input-group-addon,\n.input-group .input-group-btn {\n  flex: 1 0 auto;\n}\n.input-group .form-input:first-child:not(:last-child),\n.input-group .input-group-addon:first-child:not(:last-child),\n.input-group .input-group-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.input-group .form-input:not(:first-child):not(:last-child),\n.input-group .input-group-addon:not(:first-child):not(:last-child),\n.input-group .input-group-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n  margin-left: -0.1rem;\n}\n.input-group .form-input:last-child:not(:first-child),\n.input-group .input-group-addon:last-child:not(:first-child),\n.input-group .input-group-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n  margin-left: -0.1rem;\n}\n.input-group .form-input:focus,\n.input-group .input-group-addon:focus,\n.input-group .input-group-btn:focus {\n  z-index: 99;\n}\n.label {\n  background: #efefef;\n  color: #666666;\n  border-radius: .2rem;\n  display: inline;\n  font-size: 1em;\n  padding: .1em .3em;\n  vertical-align: baseline;\n  white-space: nowrap;\n}\n.label.label-primary {\n  background: #5764c6;\n  border-color: #4f5dc3;\n  color: #fff;\n}\n.label.label-primary a {\n  color: #fff;\n}\n.label.label-primary a:hover,\n.label.label-primary a:focus,\n.label.label-primary a:active {\n  opacity: .75;\n}\n.img-responsive {\n  display: block;\n  height: auto;\n  max-width: 100%;\n}\n.video-responsive {\n  height: 0;\n  overflow: hidden;\n  padding-bottom: 56.25%;\n  /* Default 16:9, you can calculate this value by dividing 9 by 16 */\n  padding-top: 3rem;\n  position: relative;\n}\n.video-responsive iframe,\n.video-responsive object,\n.video-responsive embed {\n  height: 100%;\n  left: 0;\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.video-responsive video {\n  height: auto;\n  max-width: 100%;\n  width: 100%;\n}\n.video-responsive-4-3 {\n  padding-bottom: 75%;\n  /* 4:3 */\n}\n.menu {\n  background: #fff;\n  border-radius: .3rem;\n  display: block;\n  margin: 0;\n  padding: .5rem;\n  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);\n  text-align: left;\n  z-index: 999;\n}\n.menu .menu-item {\n  border-radius: .3rem;\n  color: #333;\n  display: block;\n  line-height: 2.4rem;\n  margin-top: .1rem;\n  padding: .2rem 1rem;\n  text-decoration: none;\n  user-select: none;\n}\n.menu .menu-item a {\n  border-radius: .3rem;\n  color: inherit;\n  display: block;\n  margin: -0.2rem -1rem;\n  padding: .2rem 1rem;\n  text-decoration: none;\n}\n.menu .menu-item a:focus,\n.menu .menu-item a:hover {\n  color: #5764c6;\n}\n.menu .menu-item a:active,\n.menu .menu-item a.active {\n  background: #eff1fa;\n  color: #4452c0;\n}\n.menu .menu-header {\n  color: #cccccc;\n  display: block;\n  font-size: 1.2rem;\n  line-height: 1.8rem;\n  margin-top: 0;\n  padding: .2rem 1rem;\n}\n.menu .menu-header .menu-header-text {\n  background: #fff;\n  display: inline-block;\n  margin-left: -0.6rem;\n  padding: 0 .6rem;\n  position: relative;\n  z-index: 99;\n}\n.menu .menu-header::after {\n  border-bottom: 0.1rem solid #efefef;\n  content: \"\";\n  display: block;\n  height: .1rem;\n  transform: translateY(-1rem);\n  width: 100%;\n}\n.modal {\n  align-items: center;\n  bottom: 0;\n  display: none;\n  justify-content: center;\n  left: 0;\n  opacity: 0;\n  overflow: hidden;\n  position: fixed;\n  right: 0;\n  top: 0;\n}\n.modal.active {\n  display: flex;\n  opacity: 1;\n  z-index: 1988;\n}\n.modal.active .modal-overlay {\n  background: rgba(0, 0, 0, 0.75);\n  bottom: 0;\n  display: block;\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n.modal.active .modal-container {\n  animation: slide-down 0.216s;\n}\n.modal-container {\n  animation: slide-up 0.216s;\n  background: #fff;\n  border-radius: .3rem;\n  display: block;\n  margin: 0 auto;\n  padding: 0;\n  box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);\n  text-align: left;\n  z-index: 1988;\n}\n.modal-container .modal-header {\n  padding: 1.5rem;\n}\n.modal-container .modal-header .modal-title {\n  font-size: 1.5rem;\n  margin: 0;\n}\n.modal-container .modal-body {\n  max-height: 50vh;\n  overflow-y: auto;\n  padding: 1.5rem;\n  position: relative;\n}\n.modal-container .modal-footer {\n  padding: 1.5rem;\n  text-align: right;\n}\n@media screen and (min-width: 640px) {\n  .modal-container {\n    width: 64rem;\n  }\n}\n@media screen and (min-width: 320px) {\n  .modal-sm .modal-container {\n    width: 32rem;\n  }\n}\n.breadcrumb,\n.tab,\n.pagination {\n  list-style: none;\n  margin: .5rem 0;\n}\n.breadcrumb {\n  padding: 1.2rem;\n}\n.breadcrumb .breadcrumb-item {\n  display: inline-block;\n  margin: 0;\n}\n.breadcrumb .breadcrumb-item a {\n  text-decoration: none;\n}\n.breadcrumb .breadcrumb-item:last-child,\n.breadcrumb .breadcrumb-item:last-child a {\n  color: #666666;\n  pointer-events: none;\n}\n.breadcrumb .breadcrumb-item:not(:last-child)::after {\n  color: #c5c5c5;\n  content: \"/\";\n  padding: 0 .4rem;\n}\n.tab {\n  display: flex;\n  flex-wrap: nowrap;\n  max-width: 100%;\n  overflow-x: auto;\n}\n.tab .tab-item {\n  border-bottom: 0.1rem solid #c5c5c5;\n  margin-top: 0;\n}\n.tab .tab-item a {\n  border-bottom: .2rem solid transparent;\n  color: #333;\n  display: block;\n  margin-bottom: -0.1rem;\n  margin-top: 0;\n  padding: .8rem 1.4rem;\n  text-decoration: none;\n}\n.tab .tab-item a:focus,\n.tab .tab-item a:hover {\n  color: #5764c6;\n}\n.tab .tab-item.active a,\n.tab .tab-item a.active {\n  border-bottom-color: #3b49af;\n  color: #3b49af;\n}\n.tab .tab-item .badge[data-badge]::after {\n  position: absolute;\n  right: -1.4rem;\n  top: 1rem;\n  transform: translate(-50%, -1rem);\n}\n.tab.tab-block .tab-item {\n  flex: 1 0 auto;\n  text-align: center;\n}\n.pagination {\n  display: inline-block;\n  padding: 1.2rem;\n}\n.pagination .page-item {\n  display: inline-block;\n}\n.pagination .page-item span {\n  display: inline-block;\n  padding: .6rem .5rem;\n}\n.pagination .page-item a {\n  border-radius: .3rem;\n  display: inline-block;\n  margin: 0 .1rem;\n  padding: .6rem 1.2rem;\n  text-decoration: none;\n}\n.pagination .page-item a:focus,\n.pagination .page-item a:hover {\n  background: #eff1fa;\n}\n.pagination .page-item.active a {\n  background: #5764c6;\n  color: #fff;\n}\n.table {\n  border-collapse: collapse;\n  border-spacing: 0;\n  width: 100%;\n}\n.table.table-striped tbody tr:nth-of-type(odd) {\n  background: #fcfcfc;\n}\n.table.table-hover tbody tr:hover {\n  background: #f4f4f4;\n}\n.table.table-hover tbody tr.selected {\n  background: #f2f2f2;\n}\n.table th,\n.table td {\n  border-bottom: 0.1rem solid #efefef;\n  padding: 1.5rem 1rem;\n  text-align: left;\n}\n.table th {\n  border-color: #c9c9c9;\n}\n.toast {\n  background: #efefef;\n  border: 0.1rem solid #eaeaea;\n  border-radius: .3rem;\n  color: #666;\n  display: block;\n  padding: 1.4rem;\n  width: 100%;\n}\n.toast.toast-primary {\n  background: #5764c6;\n  border-color: #4f5dc3;\n  color: #fff;\n}\n.toast.toast-primary a {\n  color: #fff;\n}\n.toast.toast-primary a:hover,\n.toast.toast-primary a:focus,\n.toast.toast-primary a:active {\n  opacity: .75;\n}\n.toast.toast-success {\n  background: #32b643;\n  border-color: #30ae40;\n  color: #fff;\n}\n.toast.toast-success a {\n  color: #fff;\n}\n.toast.toast-success a:hover,\n.toast.toast-success a:focus,\n.toast.toast-success a:active {\n  opacity: .75;\n}\n.toast.toast-danger {\n  background: #e85600;\n  border-color: #de5200;\n  color: #fff;\n}\n.toast.toast-danger a {\n  color: #fff;\n}\n.toast.toast-danger a:hover,\n.toast.toast-danger a:focus,\n.toast.toast-danger a:active {\n  opacity: .75;\n}\n.toast.toast-primary .btn-clear,\n.toast.toast-success .btn-clear,\n.toast.toast-danger .btn-clear {\n  color: #fff;\n}\n.tooltip {\n  position: relative;\n}\n.tooltip::after {\n  background: rgba(51, 51, 51, 0.9);\n  border-radius: .3rem;\n  bottom: 100%;\n  color: #fff;\n  content: attr(data-tooltip);\n  display: block;\n  font-size: 1.2rem;\n  left: 50%;\n  line-height: 1.6rem;\n  max-width: 32rem;\n  opacity: 0;\n  overflow: hidden;\n  padding: .6rem 1rem;\n  pointer-events: none;\n  position: absolute;\n  text-overflow: ellipsis;\n  transform: translate(-50%, 0);\n  transition: all .216s ease;\n  z-index: 99;\n}\n.tooltip:focus::after,\n.tooltip:hover::after {\n  opacity: 1;\n  transform: translate(-50%, -0.5rem);\n}\n.tooltip[disabled],\n.tooltip.disabled {\n  pointer-events: auto;\n}\n.tooltip.tooltip-right::after {\n  bottom: 50%;\n  left: 100%;\n  transform: translate(0, 50%);\n}\n.tooltip.tooltip-right:focus::after,\n.tooltip.tooltip-right:hover::after {\n  transform: translate(0.5rem, 50%);\n}\n.tooltip.tooltip-bottom::after {\n  bottom: auto;\n  top: 100%;\n  transform: translate(-50%, 0);\n}\n.tooltip.tooltip-bottom:focus::after,\n.tooltip.tooltip-bottom:hover::after {\n  transform: translate(-50%, 0.5rem);\n}\n.tooltip.tooltip-left::after {\n  bottom: 50%;\n  left: auto;\n  right: 100%;\n  transform: translate(0, 50%);\n}\n.tooltip.tooltip-left:focus::after,\n.tooltip.tooltip-left:hover::after {\n  transform: translate(-0.5rem, 50%);\n}\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 272 */
-/*!**************************************!*\
-  !*** ./~/css-loader/lib/css-base.js ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 273 */
-/*!*************************************!*\
-  !*** ./~/style-loader/addStyles.js ***!
-  \*************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-	
-	module.exports = function(list, options) {
-		if(true) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-	
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-	
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-	
-	function createLinkElement(options) {
-		var linkElement = document.createElement("link");
-		linkElement.rel = "stylesheet";
-		insertStyleElement(options, linkElement);
-		return linkElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement(options);
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	var replaceText = (function () {
-		var textStore = [];
-	
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-	
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-	
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var sourceMap = obj.sourceMap;
-	
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-	
-		var blob = new Blob([css], { type: "text/css" });
-	
-		var oldSrc = linkElement.href;
-	
-		linkElement.href = URL.createObjectURL(blob);
-	
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
-
-/***/ },
-/* 274 */
 /*!*****************************!*\
   !*** ./components/Home.jsx ***!
   \*****************************/
@@ -29135,7 +28784,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 275 */
+/* 272 */
 /*!*************************************!*\
   !*** ./components/PageNotFound.jsx ***!
   \*************************************/
@@ -29178,7 +28827,7 @@
 	exports.default = PageNotFound;
 
 /***/ },
-/* 276 */
+/* 273 */
 /*!*****************************************!*\
   !*** ./components/ExampleComponent.jsx ***!
   \*****************************************/
@@ -29230,7 +28879,7 @@
 	exports.default = ExampleComponent;
 
 /***/ },
-/* 277 */
+/* 274 */
 /*!************************************************!*\
   !*** ./components/ExampleTwoDeepComponent.jsx ***!
   \************************************************/
