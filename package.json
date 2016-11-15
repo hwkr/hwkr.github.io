@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "The Portfolio of Brynn Hawker",
   "scripts": {
-    "start": "webpack -d --watch & live-server --entry-file=404.html"
+    "start": "webpack -d --watch & live-server --entry-file=404.html",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",

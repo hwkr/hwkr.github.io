@@ -31,7 +31,7 @@ export default {
   lessLoader: {
     lessPlugins: [
       new LessPluginCleanCSS({ advanced: true, keepSpecialComments: 1 }),
-      new LessPluginAutoPrefix({browsers: ["last 2 versions"]})
+      new LessPluginAutoPrefix({ browsers: ["last 2 versions"] })
     ]
   },
   resolve: {
@@ -46,10 +46,16 @@ export default {
           },
         }),
         new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          },
           output: {
             comments: false,
           },
         }),
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
       ];
     }
     return [];
