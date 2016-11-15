@@ -59,23 +59,23 @@
 	
 	__webpack_require__(/*! current-input */ 259);
 	
-	var _App = __webpack_require__(/*! ./components/App */ 268);
+	var _App = __webpack_require__(/*! ./components/App */ 269);
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Home = __webpack_require__(/*! ./components/Home */ 273);
+	var _Home = __webpack_require__(/*! ./components/Home */ 274);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _PageNotFound = __webpack_require__(/*! ./components/PageNotFound */ 274);
+	var _PageNotFound = __webpack_require__(/*! ./components/PageNotFound */ 275);
 	
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 	
-	var _ExampleComponent = __webpack_require__(/*! ./components/ExampleComponent */ 275);
+	var _ExampleComponent = __webpack_require__(/*! ./components/ExampleComponent */ 276);
 	
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 	
-	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/ExampleTwoDeepComponent */ 276);
+	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/ExampleTwoDeepComponent */ 277);
 	
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 	
@@ -27856,7 +27856,7 @@
 	
 	var _detectIt2 = _interopRequireDefault(_detectIt);
 	
-	var _theListener = __webpack_require__(/*! the-listener */ 265);
+	var _theListener = __webpack_require__(/*! the-listener */ 266);
 	
 	var _theListener2 = _interopRequireDefault(_theListener);
 	
@@ -27944,12 +27944,17 @@
 	
 	var _detectPointerEvents2 = _interopRequireDefault(_detectPointerEvents);
 	
+	var _detectPassiveEvents = __webpack_require__(/*! detect-passive-events */ 265);
+	
+	var _detectPassiveEvents2 = _interopRequireDefault(_detectPassiveEvents);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	/*
 	 * detectIt object structure
 	 * const detectIt = {
 	 *   deviceType: 'mouseOnly' / 'touchOnly' / 'hybrid',
+	 *   passiveEvents: boolean,
 	 *   hasTouchEventsApi: boolean,
 	 *   hasPointerEventsApi: boolean,
 	 *   hasTouch: boolean,
@@ -27961,6 +27966,7 @@
 	 *     detectPointer,
 	 *     detectTouchEvents,
 	 *     detectPointerEvents,
+	 *     detectPassiveEvents,
 	 *   },
 	 *   update() {...},
 	 *   pointerEventsPrefix(value) {return value, value will only have prefix if requiresPrefix},
@@ -27998,17 +28004,21 @@
 	    detectHover: _detectHover2.default,
 	    detectPointer: _detectPointer2.default,
 	    detectTouchEvents: _detectTouchEvents2.default,
-	    detectPointerEvents: _detectPointerEvents2.default
+	    detectPointerEvents: _detectPointerEvents2.default,
+	    detectPassiveEvents: _detectPassiveEvents2.default
 	  },
 	  update: function update() {
 	    detectIt.state.detectHover.update();
 	    detectIt.state.detectPointer.update();
 	    detectIt.state.detectTouchEvents.update();
 	    detectIt.state.detectPointerEvents.update();
+	    detectIt.state.detectPassiveEvents.update();
 	    detectIt.updateOnlyOwnProperties();
 	  },
 	  updateOnlyOwnProperties: function updateOnlyOwnProperties() {
 	    if (typeof window !== 'undefined') {
+	      detectIt.passiveEvents = detectIt.state.detectPassiveEvents.hasSupport || false;
+	
 	      detectIt.hasTouch = detectIt.state.detectTouchEvents.hasApi || detectIt.state.detectPointerEvents.hasTouch || false;
 	
 	      detectIt.deviceType = determineDeviceType(detectIt.hasTouch, detectIt.state.detectHover.anyHover, detectIt.state.detectPointer.anyFine);
@@ -28187,6 +28197,38 @@
 
 /***/ },
 /* 265 */
+/*!**********************************************!*\
+  !*** ./~/detect-passive-events/lib/index.js ***!
+  \**********************************************/
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// adapted from https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
+	var detectPassiveEvents = {
+	  update: function update() {
+	    if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
+	      var passive = false;
+	      var options = Object.defineProperty({}, 'passive', {
+	        get: function get() {
+	          passive = true;
+	        }
+	      });
+	      window.addEventListener('test', null, options);
+	
+	      detectPassiveEvents.hasSupport = passive;
+	    }
+	  }
+	};
+	
+	detectPassiveEvents.update();
+	exports.default = detectPassiveEvents;
+
+/***/ },
+/* 266 */
 /*!*************************************!*\
   !*** ./~/the-listener/lib/index.js ***!
   \*************************************/
@@ -28203,9 +28245,9 @@
 	
 	var _detectIt2 = _interopRequireDefault(_detectIt);
 	
-	var _eventMaps = __webpack_require__(/*! ./eventMaps */ 266);
+	var _eventMaps = __webpack_require__(/*! ./eventMaps */ 267);
 	
-	var _detectPassiveSupport = __webpack_require__(/*! ./detectPassiveSupport */ 267);
+	var _detectPassiveSupport = __webpack_require__(/*! ./detectPassiveSupport */ 268);
 	
 	var _detectPassiveSupport2 = _interopRequireDefault(_detectPassiveSupport);
 	
@@ -28479,7 +28521,7 @@
 	}
 
 /***/ },
-/* 266 */
+/* 267 */
 /*!*****************************************!*\
   !*** ./~/the-listener/lib/eventMaps.js ***!
   \*****************************************/
@@ -28513,7 +28555,7 @@
 	exports.touchEventsMap = touchEventsMap;
 
 /***/ },
-/* 267 */
+/* 268 */
 /*!****************************************************!*\
   !*** ./~/the-listener/lib/detectPassiveSupport.js ***!
   \****************************************************/
@@ -28539,7 +28581,7 @@
 	exports.default = hasPassive;
 
 /***/ },
-/* 268 */
+/* 269 */
 /*!****************************!*\
   !*** ./components/App.jsx ***!
   \****************************/
@@ -28557,7 +28599,7 @@
 	
 	var _reactRouter = __webpack_require__(/*! react-router */ 196);
 	
-	__webpack_require__(/*! ../styles/main.less */ 269);
+	__webpack_require__(/*! ../styles/main.less */ 270);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28637,7 +28679,7 @@
 	exports.default = App;
 
 /***/ },
-/* 269 */
+/* 270 */
 /*!**************************!*\
   !*** ./styles/main.less ***!
   \**************************/
@@ -28646,10 +28688,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../~/css-loader!./../~/less-loader!./main.less */ 270);
+	var content = __webpack_require__(/*! !./../~/css-loader!./../~/less-loader!./main.less */ 271);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 272)(content, {});
+	var update = __webpack_require__(/*! ./../~/style-loader/addStyles.js */ 273)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -28666,13 +28708,13 @@
 	}
 
 /***/ },
-/* 270 */
+/* 271 */
 /*!*********************************************************!*\
   !*** ./~/css-loader!./~/less-loader!./styles/main.less ***!
   \*********************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 271)();
+	exports = module.exports = __webpack_require__(/*! ./../~/css-loader/lib/css-base.js */ 272)();
 	// imports
 	exports.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);", ""]);
 	
@@ -28683,7 +28725,7 @@
 
 
 /***/ },
-/* 271 */
+/* 272 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -28742,7 +28784,7 @@
 
 
 /***/ },
-/* 272 */
+/* 273 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -28997,7 +29039,7 @@
 
 
 /***/ },
-/* 273 */
+/* 274 */
 /*!*****************************!*\
   !*** ./components/Home.jsx ***!
   \*****************************/
@@ -29093,7 +29135,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 274 */
+/* 275 */
 /*!*************************************!*\
   !*** ./components/PageNotFound.jsx ***!
   \*************************************/
@@ -29136,7 +29178,7 @@
 	exports.default = PageNotFound;
 
 /***/ },
-/* 275 */
+/* 276 */
 /*!*****************************************!*\
   !*** ./components/ExampleComponent.jsx ***!
   \*****************************************/
@@ -29188,7 +29230,7 @@
 	exports.default = ExampleComponent;
 
 /***/ },
-/* 276 */
+/* 277 */
 /*!************************************************!*\
   !*** ./components/ExampleTwoDeepComponent.jsx ***!
   \************************************************/
