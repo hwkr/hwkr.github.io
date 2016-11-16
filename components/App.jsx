@@ -1,16 +1,25 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-
 
 import '../styles/main.less';
 
-const propTypes = {
-  children: PropTypes.element.isRequired,
-  routes: PropTypes.array.isRequired,
-};
+export default class Home extends Component {
+  static propTypes = {
+    children: PropTypes.element.isRequired,
+    routes: PropTypes.array.isRequired,
+  }
 
-function App({ children, routes }) {
-  function generateMapMenu() {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  // static defaultProps = {
+  // }
+
+  generateMapMenu = () => {
     let path = '';
 
     function nextPath(route) {
@@ -22,7 +31,7 @@ function App({ children, routes }) {
     }
 
     return (
-      routes.filter(route => route.mapMenuTitle)
+      this.props.routes.filter(route => route.mapMenuTitle)
         .map((route, index, array) => (
           <span key={index}>
             <Link to={nextPath(route)}>{route.mapMenuTitle}</Link>
@@ -32,25 +41,15 @@ function App({ children, routes }) {
     );
   }
 
-  const repoLink = 'https://github.com/rafrex/spa-github-pages';
-
-  return (
-    <div>
-      <h1>Single Page Apps for GitHub Pages</h1>
-      <a href={repoLink}>https://github.com/rafrex/spa-github-pages</a>
-      <nav>
-        {generateMapMenu()}
-      </nav>
-      {children}
-      <div style={{ color: '#A0A0A0', fontSize: '14px', marginTop: '50px' }}>
-        <a href="http://www.rafaelpedicini.com" className="extended-link">
-          Code and concept by <span className="link-style">Rafael Pedicini</span>
-        </a>
+  render() {
+    return (
+      <div>
+        <h1>Single Page Apps for GitHub Pages</h1>
+        <nav>
+          {this.generateMapMenu()}
+        </nav>
+        {this.props.children}
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-App.propTypes = propTypes;
-
-export default App;

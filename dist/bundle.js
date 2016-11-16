@@ -28593,6 +28593,8 @@
 	  value: true
 	});
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	var _react = __webpack_require__(/*! react */ 25);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -28603,80 +28605,80 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var propTypes = {
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Home = function (_Component) {
+	  _inherits(Home, _Component);
+	
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+	
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	
+	    _this.generateMapMenu = function () {
+	      var path = '';
+	
+	      function nextPath(route) {
+	        path += (path.slice(-1) === '/' ? '' : '/') + (route.path === '/' ? '' : route.path);
+	        return path;
+	      }
+	
+	      return _this.props.routes.filter(function (route) {
+	        return route.mapMenuTitle;
+	      }).map(function (route, index, array) {
+	        return _react2.default.createElement(
+	          'span',
+	          { key: index },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: nextPath(route) },
+	            route.mapMenuTitle
+	          ),
+	          index + 1 < array.length && ' / '
+	        );
+	      });
+	    };
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  // static defaultProps = {
+	  // }
+	
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h1',
+	          null,
+	          'Single Page Apps for GitHub Pages'
+	        ),
+	        _react2.default.createElement(
+	          'nav',
+	          null,
+	          this.generateMapMenu()
+	        ),
+	        this.props.children
+	      );
+	    }
+	  }]);
+	
+	  return Home;
+	}(_react.Component);
+	
+	Home.propTypes = {
 	  children: _react.PropTypes.element.isRequired,
 	  routes: _react.PropTypes.array.isRequired
 	};
-	
-	function App(_ref) {
-	  var children = _ref.children,
-	      routes = _ref.routes;
-	
-	  function generateMapMenu() {
-	    var path = '';
-	
-	    function nextPath(route) {
-	      path += (path.slice(-1) === '/' ? '' : '/') + (route.path === '/' ? '' : route.path);
-	      return path;
-	    }
-	
-	    return routes.filter(function (route) {
-	      return route.mapMenuTitle;
-	    }).map(function (route, index, array) {
-	      return _react2.default.createElement(
-	        'span',
-	        { key: index },
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: nextPath(route) },
-	          route.mapMenuTitle
-	        ),
-	        index + 1 < array.length && ' / '
-	      );
-	    });
-	  }
-	
-	  var repoLink = 'https://github.com/rafrex/spa-github-pages';
-	
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'Single Page Apps for GitHub Pages'
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: repoLink },
-	      'https://github.com/rafrex/spa-github-pages'
-	    ),
-	    _react2.default.createElement(
-	      'nav',
-	      null,
-	      generateMapMenu()
-	    ),
-	    children,
-	    _react2.default.createElement(
-	      'div',
-	      { style: { color: '#A0A0A0', fontSize: '14px', marginTop: '50px' } },
-	      _react2.default.createElement(
-	        'a',
-	        { href: 'http://www.rafaelpedicini.com', className: 'extended-link' },
-	        'Code and concept by ',
-	        _react2.default.createElement(
-	          'span',
-	          { className: 'link-style' },
-	          'Rafael Pedicini'
-	        )
-	      )
-	    )
-	  );
-	}
-	
-	App.propTypes = propTypes;
-	
-	exports.default = App;
+	exports.default = Home;
 
 /***/ },
 /* 270 */
@@ -28701,6 +28703,8 @@
 	  value: true
 	});
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
 	var _react = __webpack_require__(/*! react */ 25);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -28709,78 +28713,65 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	function Home() {
-	  var reactLink = 'https://github.com/facebook/react';
-	  var reactRouterLink = 'https://github.com/reactjs/react-router';
-	  var ghPagesLink = 'https://pages.github.com/';
-	  var repoReadmeLink = 'https://github.com/rafrex/spa-github-pages#readme';
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'This is an example single page app built with ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: reactLink },
-	        'React'
-	      ),
-	      ' and ',
-	      ' ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: reactRouterLink },
-	        'React\xA0Router'
-	      ),
-	      ' using ',
-	      ' ',
-	      _react2.default.createElement(
-	        'code',
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Home = function (_Component) {
+	  _inherits(Home, _Component);
+	
+	  // static propTypes = {
+	  // }
+	
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+	
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	
+	    _this.state = {};
+	    return _this;
+	  }
+	
+	  // static defaultProps = {
+	  // }
+	
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
 	        null,
-	        'browserHistory'
-	      ),
-	      '. Navigate with the links below and refresh the page or copy/paste the url to test out the redirect functionality deployed to overcome ',
-	      ' ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: ghPagesLink },
-	        'GitHub\xA0Pages'
-	      ),
-	      ' incompatibility with single page apps (like this one).'
-	    ),
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'Please see the ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: repoReadmeLink },
-	        'repo readme'
-	      ),
-	      ' for instructions on how to use this boilerplate to deploy your own single page app using GitHub Pages.'
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/example' },
-	        'Example page'
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
-	        'Example two deep with query and hash'
-	      )
-	    )
-	  );
-	}
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'This is an example single page app built.'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/example' },
+	            'Example page'
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
+	            'Example two deep with query and hash'
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Home;
+	}(_react.Component);
 	
 	exports.default = Home;
 
