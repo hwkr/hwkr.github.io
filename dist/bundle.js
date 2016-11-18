@@ -63,19 +63,19 @@
 	
 	var _App2 = _interopRequireDefault(_App);
 	
-	var _Home = __webpack_require__(/*! ./components/Home */ 272);
+	var _Home = __webpack_require__(/*! ./components/pages/Home */ 272);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _PageNotFound = __webpack_require__(/*! ./components/PageNotFound */ 273);
+	var _PageNotFound = __webpack_require__(/*! ./components/pages/PageNotFound */ 273);
 	
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 	
-	var _ExampleComponent = __webpack_require__(/*! ./components/ExampleComponent */ 274);
+	var _ExampleComponent = __webpack_require__(/*! ./components/pages/ExampleComponent */ 274);
 	
 	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
 	
-	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/ExampleTwoDeepComponent */ 275);
+	var _ExampleTwoDeepComponent = __webpack_require__(/*! ./components/pages/ExampleTwoDeepComponent */ 275);
 	
 	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
 	
@@ -28611,13 +28611,13 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Home = function (_Component) {
-	  _inherits(Home, _Component);
+	var App = function (_Component) {
+	  _inherits(App, _Component);
 	
-	  function Home(props) {
-	    _classCallCheck(this, Home);
+	  function App(props) {
+	    _classCallCheck(this, App);
 	
-	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.generateMapMenu = function () {
 	      var path = '';
@@ -28650,7 +28650,7 @@
 	  // static defaultProps = {
 	  // }
 	
-	  _createClass(Home, [{
+	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -28671,14 +28671,14 @@
 	    }
 	  }]);
 	
-	  return Home;
+	  return App;
 	}(_react.Component);
 	
-	Home.propTypes = {
+	App.propTypes = {
 	  children: _react.PropTypes.element.isRequired,
 	  routes: _react.PropTypes.array.isRequired
 	};
-	exports.default = Home;
+	exports.default = App;
 
 /***/ },
 /* 270 */
@@ -28692,9 +28692,9 @@
 /***/ },
 /* 271 */,
 /* 272 */
-/*!*****************************!*\
-  !*** ./components/Home.jsx ***!
-  \*****************************/
+/*!***********************************!*\
+  !*** ./components/pages/Home.jsx ***!
+  \***********************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28777,9 +28777,9 @@
 
 /***/ },
 /* 273 */
-/*!*************************************!*\
-  !*** ./components/PageNotFound.jsx ***!
-  \*************************************/
+/*!*******************************************!*\
+  !*** ./components/pages/PageNotFound.jsx ***!
+  \*******************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28820,9 +28820,9 @@
 
 /***/ },
 /* 274 */
-/*!*****************************************!*\
-  !*** ./components/ExampleComponent.jsx ***!
-  \*****************************************/
+/*!***********************************************!*\
+  !*** ./components/pages/ExampleComponent.jsx ***!
+  \***********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28872,9 +28872,9 @@
 
 /***/ },
 /* 275 */
-/*!************************************************!*\
-  !*** ./components/ExampleTwoDeepComponent.jsx ***!
-  \************************************************/
+/*!******************************************************!*\
+  !*** ./components/pages/ExampleTwoDeepComponent.jsx ***!
+  \******************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

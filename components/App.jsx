@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 import '../styles/main.less';
 
-export default class Home extends Component {
+export default class App extends Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
     routes: PropTypes.array.isRequired,
