@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+
+import Footer from '../parts/Footer';
 
 export default class Home extends Component {
   // static propTypes = {
@@ -17,13 +18,10 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <p>
-          This is an example single page app built.
-        </p>
-        <div><Link to="/example">Example page</Link></div>
-        <div><Link to="/example/two-deep?field1=foo&field2=bar#boom!">
-          Example two deep with query and hash
-      </Link></div>
+        <main>
+          Hi.
+        </main>
+        <Footer />
       </div>
     );
   }
