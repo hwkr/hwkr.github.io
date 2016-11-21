@@ -1,5 +1,8 @@
 before_script: npm install
 script: npm run deploy
+language: node_js
+node_js:
+  - "6"
 env:
   global:
   - GH_REF: github.com/hwkr/hwkr.github.io.git
