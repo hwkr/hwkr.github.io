@@ -7,14 +7,13 @@ LAST_COMMIT="$(git rev-parse --short HEAD)"
 git clone "https://${GH_TOKEN}@${GH_REF}" site/
 cd site/
 git checkout master
+rm -r *
 cd ../
 
 # build the site
 npm run build
 
-cp -vr *.html site/
-cp -vr fonts site/fonts
-cp -vr dist site/dist
+cp -vr *.html fonts dist site/
 
 cd site/
 
