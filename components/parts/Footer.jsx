@@ -24,7 +24,7 @@ export default class Footer extends Component {
         <Brand />
         <p className="made-with">Made with <Icon name="heart" /> in Victoria, BC</p>
         <ul className="social">
-          {Config.sociallinks.map((link, i) =>
+          {Config.social_links.map((link, i) =>
             <li key={i}>
               <a href={link.href} data-tooltip={link.tooltip} target="_blank" rel="noopener noreferrer external">
                 <Icon name={link.icon} />
