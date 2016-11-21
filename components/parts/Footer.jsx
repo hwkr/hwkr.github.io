@@ -16,7 +16,10 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
-        <p>&copy; Copyright 2016 Brynn Hawker</p>
+        <p className="made-with">Made with <i className="typcn typcn-heart" /> in Victoria, BC</p>
+        <ul className="social">
+          <li>Social</li>
+        </ul>
       </footer>
     );
   }

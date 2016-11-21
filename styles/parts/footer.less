@@ -4,6 +4,9 @@ body {
 }
 
 footer {
+  .flex;
+  flex-direction: column;
+
   min-width: 100%;
   max-height: @footer-height;
   position: fixed;
@@ -13,4 +16,12 @@ footer {
   color: darken(@core-secondary-color, 20%);
 
   padding: @layout-padding/4 @layout-gutter;
+
+  .made-with {
+    align-self: center;
+  }
+
+  .social {
+    align-self: flex-end;
+  }
 }
