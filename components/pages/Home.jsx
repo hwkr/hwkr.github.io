@@ -19,12 +19,7 @@ export default class Home extends Component {
     return (
       <div>
         <main>
-          Hi.
-          <ul className="list-inline">
-            <li>Y</li>
-            <li>E</li>
-            <li>S</li>
-          </ul>
+          Hi. It works!
         </main>
         <Footer />
       </div>
