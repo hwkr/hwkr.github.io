@@ -1,3 +1,7 @@
+# Built files and Site
+dist/
+site/
+
 # Dependency directory
 node_modules
 
