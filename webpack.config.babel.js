@@ -55,6 +55,11 @@ export default {
     })(),
   },
   resolve: {
+    modulesDirectories: [
+      __dirname,
+      'node_modules',
+      'components',
+    ],
     extensions: ['', '.js', '.jsx'],
   },
   plugins: (() => [

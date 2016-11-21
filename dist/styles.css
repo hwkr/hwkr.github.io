@@ -2220,6 +2220,16 @@ a:hover {
   margin-right: .2rem;
   vertical-align: -20%;
 }
+.brand svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+.brand .outline {
+  fill: #5764c6;
+}
+.brand .type {
+  fill: #fff;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -3687,8 +3697,11 @@ footer {
   padding: 0.5rem 2rem;
   justify-content: space-between;
 }
-footer .brand {
-  fill: #a3aae0;
+footer .brand svg {
+  height: 100%;
+}
+footer .brand .outline {
+  fill: #7d87d3;
 }
 footer .social {
   list-style: none;

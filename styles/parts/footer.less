@@ -21,7 +21,12 @@ footer {
   justify-content: space-between;
 
   .brand {
-    fill: darken(@core-secondary-color, 20%);
+    svg {
+      height: 100%;
+    }
+    .outline {
+      fill: darken(@core-secondary-color, 30%);
+    }
   }
 
   .social {

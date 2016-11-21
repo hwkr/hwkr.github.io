@@ -1,5 +1,7 @@
 import React, { Component /* , PropTypes */ } from 'react';
 
+import Brand from './Brand';
+
 export default class Footer extends Component {
   static propTypes = {
   }
@@ -16,7 +18,7 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
-        <div className="brand"><b>HWKR</b></div>
+        <Brand />
         <p className="made-with">Made with <i className="typcn typcn-heart" /> in Victoria, BC</p>
         <ul className="social">
           <li>Y</li>
