@@ -1,0 +1,24 @@
+{
+  "sociallinks": [
+    {
+      "href": "https://twitter.com/bnhwkr/",
+      "tooltip": "Tweet me",
+      "icon": "social-twitter"
+    },
+    {
+      "href": "http://www.facebook.com/bnhwkr/",
+      "tooltip": "Friend me",
+      "icon": "social-facebook"
+    },
+    {
+      "href": "http://github.com/hwkr",
+      "tooltip": "Develop with me",
+      "icon": "social-github"
+    },
+    {
+      "href": "https://dribbble.com/hwkr",
+      "tooltip": "Rebound me",
+      "icon": "social-dribbble"
+    }
+  ]
+}

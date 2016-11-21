@@ -1,6 +1,9 @@
 import React, { Component /* , PropTypes */ } from 'react';
 
-import Brand from './Brand';
+import Config from 'Config';
+
+import Icon from 'parts/Icon';
+import Brand from 'parts/Brand';
 
 export default class Footer extends Component {
   static propTypes = {
@@ -19,11 +22,15 @@ export default class Footer extends Component {
     return (
       <footer>
         <Brand />
-        <p className="made-with">Made with <i className="typcn typcn-heart" /> in Victoria, BC</p>
+        <p className="made-with">Made with <Icon name="heart" /> in Victoria, BC</p>
         <ul className="social">
-          <li>Y</li>
-          <li>E</li>
-          <li>S</li>
+          {Config.sociallinks.map((link, i) =>
+            <li key={i}>
+              <a href={link.href} data-tooltip={link.tooltip} target="_blank" rel="noopener noreferrer external">
+                <Icon name={link.icon} />
+              </a>
+            </li>
+          )}
         </ul>
       </footer>
     );

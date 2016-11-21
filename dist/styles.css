@@ -3716,5 +3716,192 @@ footer .social li {
 footer .social li:last-of-type {
   padding-right: 0;
 }
+footer .social a {
+  -webkit-appearance: none;
+  background: #fff;
+  border: 0.1rem solid #5764c6;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 3.2rem;
+  line-height: 1.6rem;
+  outline: 0;
+  padding: .7rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: transparent;
+  border-color: transparent;
+  color: #5764c6;
+  position: relative;
+  height: 2rem;
+  padding: .1rem .4rem;
+}
+footer .social a .icon {
+  font-size: 1.3333em;
+  line-height: .8em;
+  margin-right: .2rem;
+  vertical-align: -20%;
+}
+footer .social a:focus {
+  background: #f3f4fb;
+}
+footer .social a:hover {
+  background: #5764c6;
+  border-color: #4452c0;
+  color: #fff;
+}
+footer .social a:active,
+footer .social a.active {
+  background: #4452c0;
+  border-color: #3b49af;
+  color: #fff;
+}
+footer .social a.btn-primary {
+  background: #5764c6;
+  border-color: #4452c0;
+  color: #fff;
+}
+footer .social a.btn-primary:focus {
+  background: #4856c1;
+  border-color: #3b49af;
+  color: #fff;
+}
+footer .social a.btn-primary:hover {
+  background: #404fbe;
+  border-color: #35419c;
+  color: #fff;
+}
+footer .social a.btn-primary:active,
+footer .social a.btn-primary.active {
+  background: #3e4cb6;
+  border-color: #35419c;
+  color: #fff;
+}
+footer .social a.btn-primary.loading::after {
+  border-color: #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+footer .social a.btn-link {
+  background: transparent;
+  border-color: transparent;
+  color: #5764c6;
+}
+footer .social a.btn-link:focus,
+footer .social a.btn-link:hover {
+  background: #f4f4f4;
+  color: #35419c;
+}
+footer .social a.btn-link:active,
+footer .social a.btn-link.active {
+  background: #efefef;
+  color: #283176;
+}
+footer .social a.btn-sm {
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  height: 2.4rem;
+  line-height: 1.4rem;
+  padding: .4rem 1rem;
+}
+footer .social a.btn-lg {
+  border-radius: .4rem;
+  font-size: 1.8rem;
+  height: 4.2rem;
+  line-height: 2rem;
+  padding: 1rem 1.8rem;
+}
+footer .social a.btn-block {
+  display: block;
+  width: 100%;
+}
+footer .social a.btn-clear {
+  background: transparent;
+  border: 0;
+  color: #666;
+  height: 2rem;
+  margin-left: .3rem;
+  opacity: .45;
+  padding: 0;
+}
+footer .social a.btn-clear:hover {
+  opacity: .85;
+}
+footer .social a.btn-clear::before {
+  content: '\D7';
+  font-size: 2rem;
+}
+footer .social a:focus,
+footer .social a:hover {
+  background: #f4f4f4;
+  color: #35419c;
+}
+footer .social a:active,
+footer .social a.active {
+  background: #efefef;
+  color: #283176;
+}
+footer .social a::after {
+  background: rgba(51, 51, 51, 0.9);
+  border-radius: .3rem;
+  bottom: 100%;
+  color: #fff;
+  content: attr(data-tooltip);
+  display: block;
+  font-size: 1.2rem;
+  left: 50%;
+  line-height: 1.6rem;
+  max-width: 32rem;
+  opacity: 0;
+  overflow: hidden;
+  padding: .6rem 1rem;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  transform: translate(-50%, 0);
+  transition: all .216s ease;
+  z-index: 99;
+}
+footer .social a:focus::after,
+footer .social a:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -0.5rem);
+}
+footer .social a[disabled],
+footer .social a.disabled {
+  pointer-events: auto;
+}
+footer .social a.tooltip-right::after {
+  bottom: 50%;
+  left: 100%;
+  transform: translate(0, 50%);
+}
+footer .social a.tooltip-right:focus::after,
+footer .social a.tooltip-right:hover::after {
+  transform: translate(0.5rem, 50%);
+}
+footer .social a.tooltip-bottom::after {
+  bottom: auto;
+  top: 100%;
+  transform: translate(-50%, 0);
+}
+footer .social a.tooltip-bottom:focus::after,
+footer .social a.tooltip-bottom:hover::after {
+  transform: translate(-50%, 0.5rem);
+}
+footer .social a.tooltip-left::after {
+  bottom: 50%;
+  left: auto;
+  right: 100%;
+  transform: translate(0, 50%);
+}
+footer .social a.tooltip-left:focus::after,
+footer .social a.tooltip-left:hover::after {
+  transform: translate(-0.5rem, 50%);
+}
 
 /*# sourceMappingURL=styles.css.map*/

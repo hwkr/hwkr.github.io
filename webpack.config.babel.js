@@ -6,6 +6,8 @@ const LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const Configuration = require('./config.json');
+
 const production = process.argv.indexOf('-p') !== -1;
 
 export default {
@@ -25,7 +27,6 @@ export default {
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract(
-          // activate source maps via loader query
           'css?sourceMap!' +
           `less?${production ? 'compress' : 'sourceMap'}`
         ),
@@ -53,6 +54,9 @@ export default {
       }
       return [];
     })(),
+  },
+  externals: {
+    Config: JSON.stringify(Configuration),
   },
   resolve: {
     modulesDirectories: [
