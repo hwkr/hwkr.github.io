@@ -2,7 +2,7 @@
 node_modules
 
 # Source maps
-*.js.map
+*.map
 
 # Files marked with gitigx
 *gitigx*

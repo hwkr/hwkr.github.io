@@ -1935,6 +1935,19 @@ dl dt {
 dl dd {
   margin: .5rem 0 1.5rem 0;
 }
+.list-inline {
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem;
+}
+.list-inline li {
+  display: inline-block;
+  margin: 0;
+  padding-right: 1rem;
+}
+.list-inline li:last-of-type {
+  padding-right: 0;
+}
 .lead {
   font-size: 120%;
 }
@@ -3664,20 +3677,31 @@ body {
 }
 footer {
   display: flex;
-  flex-direction: column;
   min-width: 100%;
   max-height: 3rem;
   position: fixed;
   bottom: 0;
   background: #eff1fa;
   color: #a3aae0;
+  font-size: 1.2rem;
   padding: 0.5rem 2rem;
+  justify-content: space-between;
 }
-footer .made-with {
-  align-self: center;
+footer .brand {
+  fill: #a3aae0;
 }
 footer .social {
-  align-self: flex-end;
+  list-style: none;
+  display: inline-block;
+  margin: 0 1rem;
+}
+footer .social li {
+  display: inline-block;
+  margin: 0;
+  padding-right: 1rem;
+}
+footer .social li:last-of-type {
+  padding-right: 0;
 }
 
 /*# sourceMappingURL=styles.css.map*/

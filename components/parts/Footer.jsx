@@ -16,9 +16,12 @@ export default class Footer extends Component {
   render() {
     return (
       <footer>
+        <div className="brand"><b>HWKR</b></div>
         <p className="made-with">Made with <i className="typcn typcn-heart" /> in Victoria, BC</p>
         <ul className="social">
-          <li>Social</li>
+          <li>Y</li>
+          <li>E</li>
+          <li>S</li>
         </ul>
       </footer>
     );

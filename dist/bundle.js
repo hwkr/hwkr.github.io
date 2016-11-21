@@ -28715,7 +28715,26 @@
 	        _react2.default.createElement(
 	          'main',
 	          null,
-	          'Hi.'
+	          'Hi.',
+	          _react2.default.createElement(
+	            'ul',
+	            { className: 'list-inline' },
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              'Y'
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              'E'
+	            ),
+	            _react2.default.createElement(
+	              'li',
+	              null,
+	              'S'
+	            )
+	          )
 	        ),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
@@ -28776,6 +28795,15 @@
 	        "footer",
 	        null,
 	        _react2.default.createElement(
+	          "div",
+	          { className: "brand" },
+	          _react2.default.createElement(
+	            "b",
+	            null,
+	            "HWKR"
+	          )
+	        ),
+	        _react2.default.createElement(
 	          "p",
 	          { className: "made-with" },
 	          "Made with ",
@@ -28788,7 +28816,17 @@
 	          _react2.default.createElement(
 	            "li",
 	            null,
-	            "Social"
+	            "Y"
+	          ),
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "E"
+	          ),
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "S"
 	          )
 	        )
 	      );

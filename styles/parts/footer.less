@@ -5,7 +5,6 @@ body {
 
 footer {
   .flex;
-  flex-direction: column;
 
   min-width: 100%;
   max-height: @footer-height;
@@ -15,13 +14,17 @@ footer {
   background: @core-secondary-color;
   color: darken(@core-secondary-color, 20%);
 
+  font-size: @body-font-size - 0.2rem;
+
   padding: @layout-padding/4 @layout-gutter;
 
-  .made-with {
-    align-self: center;
+  justify-content: space-between;
+
+  .brand {
+    fill: darken(@core-secondary-color, 20%);
   }
 
   .social {
-    align-self: flex-end;
+    .list-inline;
   }
 }

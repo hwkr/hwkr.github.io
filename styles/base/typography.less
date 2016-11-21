@@ -81,6 +81,19 @@ dl {
     margin: .5rem 0 1.5rem 0;
   }
 }
+.list-inline {
+  list-style: none;
+  display: inline-block;
+  margin: 0 @layout-margin/2;
+  li {
+    display: inline-block;
+    margin: 0;
+    padding-right: @layout-padding/2;
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
 .lead {
   font-size: 120%;
 }

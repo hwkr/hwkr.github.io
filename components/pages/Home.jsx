@@ -20,6 +20,11 @@ export default class Home extends Component {
       <div>
         <main>
           Hi.
+          <ul className="list-inline">
+            <li>Y</li>
+            <li>E</li>
+            <li>S</li>
+          </ul>
         </main>
         <Footer />
       </div>
