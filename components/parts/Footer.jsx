@@ -1,4 +1,5 @@
 import React, { Component /* , PropTypes */ } from 'react';
+import classNames from 'classnames';
 
 import Config from 'Config';
 
@@ -19,6 +20,11 @@ export default class Footer extends Component {
   // }
 
   render() {
+    const linkClass = classNames([
+      'btn',
+      'btn-link',
+      'tooltip',
+    ]);
     return (
       <footer>
         <Brand />
@@ -26,7 +32,7 @@ export default class Footer extends Component {
         <ul className="social">
           {Config.social_links.map((link, i) =>
             <li key={i}>
-              <a href={link.href} data-tooltip={link.tooltip} target="_blank" rel="noopener noreferrer external">
+              <a href={link.href} className={linkClass} data-tooltip={link.tooltip} target="_blank" rel="noopener noreferrer external">
                 <Icon name={link.icon} />
               </a>
             </li>
