@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
-
-import Config from 'Config';
 
 import Footer from '../parts/Footer';
 

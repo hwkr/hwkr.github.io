@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import Helmet from 'react-helmet';
+
 const propTypes = {
   children: PropTypes.element,
 };
@@ -8,6 +10,7 @@ const propTypes = {
 function ExampleComponent({ children }) {
   return (
     <div>
+      <Helmet title="Example" />
       <p>
         This is an example page. Refresh the page or copy/paste the url to
         test out the redirect functionality (this same page should load
