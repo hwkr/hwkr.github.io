@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import Config from 'Config';
 
 import '../styles/main.less';
+import '../img/favicon.png';
 
 export default class App extends Component {
   static propTypes = {
