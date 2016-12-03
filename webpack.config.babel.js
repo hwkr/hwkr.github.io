@@ -5,6 +5,7 @@ const LessPluginCleanCSS = require('less-plugin-clean-css');
 const LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const Configuration = require('./config.json');
 
@@ -68,6 +69,12 @@ export default {
   },
   plugins: (() => [
     new ExtractTextPlugin('styles.css'),
+    new FaviconsWebpackPlugin({
+      logo: 'img/icon.png',
+      prefix: 'icons/',
+      background: Configuration.themecolor,
+      title: Configuration.title,
+    }),
   ].concat(
     production ? [
       // Production only plugins
