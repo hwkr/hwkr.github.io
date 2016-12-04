@@ -3,6 +3,9 @@ script: npm run deploy
 language: node_js
 node_js:
   - "6"
+branches:
+  only:
+  - deploy
 env:
   global:
   - GH_REF: github.com/hwkr/hwkr.github.io.git
