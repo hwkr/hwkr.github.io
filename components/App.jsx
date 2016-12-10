@@ -4,7 +4,8 @@ import Head from 'parts/Head';
 
 import Config from 'Config';
 
-import '../styles/main.less';
+import '../styles/styles.less';
+import '../font/hawkicon.font';
 
 export default class App extends Component {
   static propTypes = {

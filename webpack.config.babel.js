@@ -17,6 +17,7 @@ export default {
   output: {
     path: `${__dirname}/dist`,
     filename: 'bundle.js',
+    publicPath: '/dist/',
   },
   module: {
     loaders: [
@@ -40,7 +41,15 @@ export default {
         ],
       },
       {
-        test: /font[\\|/][^.]+\.(eot|svg|ttf|woff|woff2)$/,
+        test: /\.font\.?(js|json)$/,
+        loader: ExtractTextPlugin.extract(
+          'css?sourceMap!' +
+          `less?${production ? 'compress' : 'sourceMap'}!` +
+          'fontgen?fileName=[fontname][ext]&template=font/less.hbs',
+        ),
+      },
+      {
+        test: /.(eot|ttf|woff|woff2)$/,
         loaders: ['file?name=[name].[ext]'],
       },
     ],

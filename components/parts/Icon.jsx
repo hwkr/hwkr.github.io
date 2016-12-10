@@ -16,7 +16,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <i className={`typcn typcn-${this.props.name}`} />
+      <i className={`hi hi-${this.props.name}`} />
     );
   }
 }
