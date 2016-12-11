@@ -13,7 +13,7 @@ cd ../
 # build the site
 npm run build
 
-cp -vr *.html fonts dist site/
+cp -vr *.html dist site/
 
 cd site/
 
