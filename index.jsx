@@ -13,7 +13,12 @@ import PageNotFound from 'pages/PageNotFound';
 import ExampleComponent from 'pages/ExampleComponent';
 import ExampleTwoDeepComponent from 'pages/ExampleTwoDeepComponent';
 
+import 'file-loader?name=page.js!page.js';
+import 'styles/styles.less';
+import 'font/hawkicon.font';
+
 ReactGA.initialize(Config.tracking_id);
+
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>

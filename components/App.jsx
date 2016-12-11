@@ -5,9 +5,6 @@ import Footer from 'parts/Footer';
 
 import Config from 'Config';
 
-import 'styles/styles.less';
-import 'font/hawkicon.font';
-
 export default class App extends Component {
   static propTypes = {
     children: PropTypes.element.isRequired,

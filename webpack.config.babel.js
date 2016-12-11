@@ -4,8 +4,11 @@ import webpack from 'webpack';
 const LessPluginCleanCSS = require('less-plugin-clean-css');
 const LessPluginAutoPrefix = require('less-plugin-autoprefix');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
+const HtmlWebpackTemplate = require('html-webpack-template');
 
 const Configuration = require('./config.json');
 
@@ -83,6 +86,28 @@ export default {
       prefix: 'icons/',
       background: Configuration.themecolor,
       title: Configuration.title,
+    }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      template: HtmlWebpackTemplate,
+      filename: '../index.html',
+      appMountId: 'root',
+      baseHref: production ? `http://${Configuration.host}` : false,
+      mobile: true,
+      title: Configuration.title,
+      meta: {
+        description: Configuration.description,
+        'og:title': Configuration.title,
+        'og:description': Configuration.description,
+        'og:type': 'website',
+        'og:image': `http://${Configuration.host}/dist/icons/apple-touch-startup-image-750x1294.png`,
+      },
+      links: [
+      ],
+      inlineManifestWebpackName: 'webpackManifest',
+      scripts: [
+        '/dist/page.js',
+      ],
     }),
   ].concat(
     production ? [
