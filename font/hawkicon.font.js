@@ -1,4 +1,7 @@
 const icons = [
+  'icons/bookmark.svg',
+  'icons/book.svg',
+  'icons/briefcase.svg',
   'icons/heart.svg',
   'icons/social-dribbble.svg',
   'icons/social-facebook.svg',
@@ -8,6 +11,7 @@ const icons = [
   'icons/social-stack-exchange.svg',
   'icons/social-steam.svg',
   'icons/social-twitter.svg',
+  'icons/warning.svg',
 ];
 
 module.exports = {

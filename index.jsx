@@ -7,9 +7,17 @@ import ReactGA from 'react-ga';
 
 import Config from 'Config';
 
+/*
+    Pages
+*/
+
 import App from 'App';
 import Home from 'pages/Home';
 import PageNotFound from 'pages/PageNotFound';
+
+import Portfolio from 'pages/portfolio';
+import SocialCompass from 'pages/portfolio/SocialCompass';
+
 import ExampleComponent from 'pages/ExampleComponent';
 import ExampleTwoDeepComponent from 'pages/ExampleTwoDeepComponent';
 
@@ -26,6 +34,9 @@ const routes = (
 
     <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
+    </Route>
+    <Route path="portfolio" mapMenuTitle="Portfolio" component={Portfolio}>
+      <Route path="social-compass" mapMenuTitle="Social Compass" component={SocialCompass} />
     </Route>
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
