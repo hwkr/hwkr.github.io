@@ -3,12 +3,17 @@ import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import 'current-input';
 
-import App from './components/App';
-import Home from './components/pages/Home';
-import PageNotFound from './components/pages/PageNotFound';
-import ExampleComponent from './components/pages/ExampleComponent';
-import ExampleTwoDeepComponent from './components/pages/ExampleTwoDeepComponent';
+import ReactGA from 'react-ga';
 
+import Config from 'Config';
+
+import App from 'App';
+import Home from 'pages/Home';
+import PageNotFound from 'pages/PageNotFound';
+import ExampleComponent from 'pages/ExampleComponent';
+import ExampleTwoDeepComponent from 'pages/ExampleTwoDeepComponent';
+
+ReactGA.initialize(Config.tracking_id);
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
@@ -22,11 +27,16 @@ const routes = (
   </Route>
 );
 
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+}
 
 render(
   <Router
     history={browserHistory}
     routes={routes}
+    onUpdate={logPageView}
   />,
   document.getElementById('root')
 );
