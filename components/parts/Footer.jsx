@@ -28,7 +28,7 @@ export default class Footer extends Component {
     return (
       <footer>
         <Brand />
-        <p className="made-with">Made with <Icon name="heart" /> in Victoria, BC</p>
+        <p className="made-with hide-xs">Made with <Icon name="heart" /> in Victoria, BC</p>
         <ul className="social">
           {Config.social_links.map((link, i) =>
             <li key={i}>
