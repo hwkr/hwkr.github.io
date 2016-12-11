@@ -45,7 +45,7 @@ export default {
         loader: ExtractTextPlugin.extract(
           'css?sourceMap!' +
           `less?${production ? 'compress' : 'sourceMap'}!` +
-          'fontgen?fileName=[fontname][ext]&template=font/less.hbs',
+          'fontgen?fileName=[fontname][ext]',
         ),
       },
       {

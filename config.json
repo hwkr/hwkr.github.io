@@ -33,6 +33,11 @@
   "social_links": [
     {
       "href": "https://twitter.com/bnhwkr/",
+      "tooltip": "Chat with me",
+      "icon": "social-facebook-messenger-bubble"
+    },
+    {
+      "href": "https://twitter.com/bnhwkr/",
       "tooltip": "Tweet me",
       "icon": "social-twitter"
     },

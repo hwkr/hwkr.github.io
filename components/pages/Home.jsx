@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Icon from 'parts/Icon';
+
 export default class Home extends Component {
   // static propTypes = {
   // }
@@ -25,6 +27,10 @@ export default class Home extends Component {
                 It's nice to meet you!
               </small>
             </h1>
+            <br />
+            <button className="btn btn-primary btn-fat">
+              <Icon name="social-facebook-messenger-bubble" size={1.3} /> Talk to me right meow
+            </button>
           </div>
         </main>
       </div>

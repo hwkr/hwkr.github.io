@@ -2,6 +2,8 @@ const icons = [
   'icons/heart.svg',
   'icons/social-dribbble.svg',
   'icons/social-facebook.svg',
+  'icons/social-facebook-messenger.svg',
+  'icons/social-facebook-messenger-bubble.svg',
   'icons/social-github.svg',
   'icons/social-stack-exchange.svg',
   'icons/social-steam.svg',
@@ -17,5 +19,5 @@ module.exports = {
   baseClass: 'hi',
   fixedWidth: true,
   types: ['eot', 'woff', 'ttf'],
-  cssFontsPath: 'dist/',
+  cssTemplate: 'templates/less.hbs',
 };

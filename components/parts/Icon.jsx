@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 export default class Footer extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
+    size: PropTypes.number,
   }
 
   constructor(props) {
@@ -16,7 +17,7 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <i className={`hi hi-${this.props.name}`} />
+      <i className={`hi hi-${this.props.name}`} style={{ fontSize: `${this.props.size}em` }} />
     );
   }
 }
