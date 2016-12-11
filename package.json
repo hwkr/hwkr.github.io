@@ -5,7 +5,8 @@
   "scripts": {
     "start": "webpack -d --watch & live-server --entry-file=404.html",
     "build": "webpack -p",
-    "deploy": "bash ./.deploy.sh"
+    "deploy": "bash ./.deploy.sh",
+    "push": "git checkout deploy; git merge develop; git push; git checkout develop"
   },
   "repository": {
     "type": "git",
