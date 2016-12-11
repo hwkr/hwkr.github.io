@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 
 
 export default class SocialCompass extends Component {
@@ -12,6 +13,7 @@ export default class SocialCompass extends Component {
   render() {
     return (
       <div>
+        <Helmet title="Social Compass" />
         Hello World
       </div>
     );

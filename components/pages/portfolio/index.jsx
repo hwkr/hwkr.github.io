@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
 
 import Icon from 'parts/Icon';
 
@@ -22,6 +23,7 @@ export default class Portfolio extends Component {
     const { children } = this.props;
     return (
       <div className="container">
+        <Helmet title="Portfolio" />
         {children || (
           <div className="columns col-center">
             <div className="column col-6">
