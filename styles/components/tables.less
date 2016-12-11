@@ -7,7 +7,7 @@
   &.table-striped {
     tbody {
       tr:nth-of-type(odd) {
-        background: lighten(@core-border-color, 4%);
+        background: @grey-light-light;
       }
     }
   }
@@ -15,21 +15,24 @@
     tbody {
       tr {
         &:hover {
-          background: lighten(@core-border-color, 2%);
+          background: @grey-light;
         }
         &.selected {
-          background: lighten(@core-color, 35%);
+          background: @grey-light;
+            &:hover {
+            background: @grey-light-dark;
+          }
         }
       }
     }
   }
   th,
   td {
-    border-bottom: .1rem solid @core-border-color;
+    border-bottom: .1rem solid @grey-light;
     padding: 1.5rem 1rem;
     text-align: left;
   }
   th {
-    border-color: darken(@core-border-color, 15%);
+    border-color: @grey-light-dark;
   }
 }
