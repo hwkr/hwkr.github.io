@@ -55,12 +55,7 @@ export default class Head extends Component {
         titleTemplate={`%s – ${Config.title}`}
         defaultTitle={Config.title}
         meta={[
-          { name: 'description', content: Config.description },
-          { property: 'og:title', content: Config.title },
-          { property: 'og:type', content: 'website' },
-          { property: 'og:image', content: '' },
           { property: 'mobile-web-app-capable', content: 'yes' },
-          { property: 'theme-color', content: Config.themecolor },
           { property: 'application-name', content: Config.title },
         ]}
         link={[
