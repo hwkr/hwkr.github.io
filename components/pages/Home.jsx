@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Config from 'Config'
+import Config from 'Config';
 
 import Icon from 'parts/Icon';
 
