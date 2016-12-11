@@ -50,6 +50,16 @@
       "href": "https://dribbble.com/hwkr",
       "tooltip": "Rebound me",
       "icon": "social-dribbble"
+    },
+    {
+      "href": "http://ux.stackexchange.com/users/77302/brynn",
+      "tooltip": "Exchange with me",
+      "icon": "social-stack-exchange"
+    },
+    {
+      "href": "http://steamcommunity.com/id/byteHero/",
+      "tooltip": "Game with me",
+      "icon": "social-steam"
     }
   ]
 }
