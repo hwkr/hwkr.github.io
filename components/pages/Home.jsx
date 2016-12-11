@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import Footer from '../parts/Footer';
-
 export default class Home extends Component {
   // static propTypes = {
   // }
@@ -29,7 +27,6 @@ export default class Home extends Component {
             </h1>
           </div>
         </main>
-        <Footer />
       </div>
     );
   }

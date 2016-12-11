@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 
 import Head from 'parts/Head';
+import Footer from 'parts/Footer';
 
 import Config from 'Config';
 
-import '../styles/styles.less';
-import '../font/hawkicon.font';
+import 'styles/styles.less';
+import 'font/hawkicon.font';
 
 export default class App extends Component {
   static propTypes = {
@@ -29,6 +30,7 @@ export default class App extends Component {
       <div>
         <Head />
         {this.props.children}
+        <Footer />
       </div>
     );
   }
