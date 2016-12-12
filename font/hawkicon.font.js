@@ -1,4 +1,6 @@
 const icons = [
+  'icons/arrow-down.svg',
+  'icons/arrow-down-outline.svg',
   'icons/bookmark.svg',
   'icons/book.svg',
   'icons/briefcase.svg',
