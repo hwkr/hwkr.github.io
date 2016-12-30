@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-scroll';
+
 import Helmet from 'react-helmet';
 import classNames from 'classnames';
 
@@ -32,10 +34,10 @@ export default class Project extends Component {
   renderToc = (sections) => {
     if (!sections) return null;
     return (
-      <ol className="toc">
+      <ol className="sidenav-list toc">
         {sections.map((section) =>
           <li key={section.id}>
-            <span>{section.title}</span>
+            <Link className="btn btn-nav btn-sm" to={section.id} spy smooth>{section.title}</Link>
             {this.renderToc(section.subsections)}
           </li>
         )}
@@ -48,9 +50,9 @@ export default class Project extends Component {
     return (
       <div>
         {sections.map((section) =>
-          <section key={section.id} id={section.id}>
-            <div>
-              {section.title}
+          <section key={section.id} id={section.id} className="fill-full-page">
+            <div className="container">
+              <h2>{section.title}</h2>
             </div>
             {this.renderSections(section.subsections)}
           </section>
@@ -64,16 +66,18 @@ export default class Project extends Component {
     return (
       <main className={classNames('project', project.id)}>
         <Helmet title={project.title} />
-        <section className="contents container " style={{ minHeight: '80vh' }}>
+        <div className="sidenav">
+          {this.renderToc(project.sections)}
+        </div>
+        <section className="hero">{project.hero}</section>
+        <section className="contents container fill-full-page">
           <div className="columns cols-md">
             <div className="column col-12">
               <h2>Contents</h2>
             </div>
           </div>
           <div className="columns cols-md">
-            <div className="column col-6">
-              {this.renderToc(project.sections)}
-            </div>
+            <div className="column col-6" />
           </div>
         </section>
         {this.renderSections(project.sections)}

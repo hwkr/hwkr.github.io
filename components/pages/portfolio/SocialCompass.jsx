@@ -10,8 +10,8 @@ export default {
   title: 'Social Compass',
   id: 'social-compass',
   hero:
-    <section className="hero">
-      <div className="col-12">
+    <div className="columns col-center">
+      <div className="column col-12">
         <h1 className="col-8 col-md-12">
           <img alt="Social Compass" src={Logo} />
           <img className="made-with" alt="The CHISEL Group" src={ChiselLogo} />
@@ -20,7 +20,7 @@ export default {
       <div className="read-more">
         <a className="btn btn-link btn-more">Read more<br /><Icon name="arrow-down" /></a>
       </div>
-    </section>,
+    </div>,
   sections: [
     {
       id: 'problem',

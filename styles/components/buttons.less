@@ -79,6 +79,24 @@
     }
   }
 
+  // Button Nav
+  &.btn-nav {
+    background: transparent;
+    border-color: transparent;
+    color: lighten(@body-font-color, 15%);
+    &:focus,
+    &:hover {
+      background: transparent;
+      color: darken(@body-font-color, 10%);
+    }
+    &:active,
+    &.active {
+      background: transparent;
+      color: @core-link-color;
+      font-weight: bold;
+    }
+  }
+
   // Button Small
   &.btn-sm {
     border-radius: .2rem;
@@ -236,6 +254,22 @@
       &.active {
         background: @grey-light;
         color: darken(@color, 25%);
+      }
+    }
+    // Button Nav
+    &.btn-nav {
+      background: transparent;
+      border-color: transparent;
+      color: lighten(@body-font-color, 15%);
+      &:focus,
+      &:hover {
+        background: transparent;
+        color: darken(@body-font-color, 10%);
+      }
+      &:active,
+      &.active {
+        background: transparent;
+        color: @color;
       }
     }
   }
