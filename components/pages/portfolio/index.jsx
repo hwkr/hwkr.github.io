@@ -9,18 +9,6 @@ export default class Portfolio extends Component {
     children: PropTypes.element,
   }
 
-  static tableOfContents = (sections) =>
-    <ol className="table-of-contents">
-      {
-        sections.map((section) =>
-          <li key={section.id}>
-            <span>{section.title}</span>
-            {section.subsections ? Portfolio.tableOfContents(section.subsections) : null}
-          </li>
-        )
-      }
-    </ol>
-
   constructor(props) {
     super(props);
     this.state = {

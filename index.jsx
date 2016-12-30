@@ -16,6 +16,7 @@ import Home from 'pages/Home';
 import PageNotFound from 'pages/PageNotFound';
 
 import Portfolio from 'pages/portfolio';
+import Project from 'pages/portfolio/Project';
 import SocialCompass from 'pages/portfolio/SocialCompass';
 
 import ExampleComponent from 'pages/ExampleComponent';
@@ -36,7 +37,7 @@ const routes = (
       <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
     </Route>
     <Route path="portfolio" mapMenuTitle="Portfolio" component={Portfolio}>
-      <Route path="social-compass" mapMenuTitle="Social Compass" component={SocialCompass} />
+      <Route path="social-compass" mapMenuTitle="Social Compass" project={SocialCompass} component={Project} />
     </Route>
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
