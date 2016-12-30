@@ -6,6 +6,7 @@
   padding-right: @layout-gutter;
   width: 100%;
   &:extend(.clearfix all);
+
 }
 // Grid sizes
 @media screen and (min-width: (960px + 2 * @html-font-size * @layout-gutter)) {
@@ -25,6 +26,21 @@
   flex-wrap: wrap;
   margin-left: -@layout-gutter;
   margin-right: -@layout-gutter;
+
+  &.cols-xl,
+  &.cols-lg,
+  &.cols-md,
+  &.cols-sm,
+  &.cols-xs {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.cols-xl { max-width: @size-xl; }
+  &.cols-lg { max-width: @size-lg; }
+  &.cols-md { max-width: @size-md; }
+  &.cols-sm { max-width: @size-sm; }
+  &.cols-xs { max-width: @size-xs; }
 
   &.col-gapless {
     margin-left: 0;

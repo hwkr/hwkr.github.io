@@ -9,6 +9,17 @@ export default class Portfolio extends Component {
     children: PropTypes.element,
   }
 
+  static tableOfContents = (sections) =>
+    <ol className="table-of-contents">
+      {
+        sections.map((section) =>
+          <li key={section.id}>
+            <span>{section.title}</span>
+            {section.subsections ? Portfolio.tableOfContents(section.subsections) : null}
+          </li>
+        )
+      }
+    </ol>
 
   constructor(props) {
     super(props);
@@ -16,13 +27,10 @@ export default class Portfolio extends Component {
     };
   }
 
-  // static defaultProps = {
-  // }
-
   render() {
     const { children } = this.props;
     return (
-      <div className="container">
+      <div>
         <Helmet title="Portfolio" />
         {children || (
           <div className="columns col-center">
