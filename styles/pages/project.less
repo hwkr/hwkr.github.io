@@ -1,0 +1,14 @@
+.project {
+  .read-more {
+    position: absolute;
+    bottom: @footer-height + @layout-gutter;
+  }
+}
+
+.project-variant(@color){
+  .button-variant(@color);
+
+  .sidenav .sidenav-list .btn.active:before {
+    background-color: @color;
+  }
+}

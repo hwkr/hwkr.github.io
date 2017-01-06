@@ -1,6 +1,8 @@
 .social-compass {
   @brand-color: #993333;
 
+  .project-variant(@brand-color);
+
   .hero {
     h1{
       line-height: 0;
@@ -17,11 +19,6 @@
         }
       }
     }
-
-    .read-more {
-      position: absolute;
-      bottom: @footer-height + @layout-gutter;
-    }
   }
 
   .contents {
@@ -29,7 +26,4 @@
     color: @core-light-color;
     .button-variant(@core-light-color);
   }
-
-  .button-variant(@brand-color);
-
 }
