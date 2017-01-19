@@ -134,9 +134,17 @@
 
   & > .sidenav-list {
     padding: @layout-padding/2;
+    width: 100%;
     li .btn {
       padding: 0;
+      max-width: 100%;
       transform: translateX(-(@sidenav-width + @layout-padding));
+      span {
+        max-width: 100%;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       &:before {
         display: block;
         position: absolute;

@@ -37,7 +37,9 @@ export default class Project extends Component {
       <ol className="sidenav-list toc">
         {sections.map((section) =>
           <li key={section.id}>
-            <Link className="btn btn-nav btn-sm" to={section.id} spy smooth>{section.title}</Link>
+            <Link className="btn btn-nav btn-sm" to={section.id} spy smooth>
+              <span>{section.title}</span>
+            </Link>
             {this.renderToc(section.subsections)}
           </li>
         )}
