@@ -135,6 +135,7 @@
   & > .sidenav-list {
     padding: @layout-padding/2;
     li .btn {
+      padding: 0;
       transform: translateX(-(@sidenav-width + @layout-padding));
       &:before {
         display: block;
@@ -143,9 +144,9 @@
         background-color: lighten(@body-font-color, 60%);
         margin: (@body-font-size/2 - @border-radius/2) 0;
         width: @sidenav-width;
-        height: @border-radius;
+        height: 0.2rem;
         border-radius: @border-radius*2;
-        transform: translateX(1.6rem);
+        transform: translateX(2.5rem);
       }
       &, &:before {
         transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -154,7 +155,7 @@
     .sidenav-list {
       margin-left: @layout-padding/2;
       li .btn:before {
-        transform: translateX(0);
+        transform: translateX(1rem);
       }
     }
   }
