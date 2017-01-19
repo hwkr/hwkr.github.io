@@ -6,7 +6,8 @@ import { Link } from 'react-scroll';
 // Images
 const Logo = require('img/portfolio/socialcompass/logo-color.svg');
 const ChiselLogo = require('img/portfolio/socialcompass/chisel-logo.svg');
-const placeholder = require('img/portfolio/placeholder.svg');
+const socialmap = require('img/portfolio/socialcompass/social-map.png');
+// const placeholder = require('img/portfolio/placeholder.svg');
 
 export default {
   title: 'Social Compass',
@@ -35,9 +36,9 @@ export default {
       id: 'problem',
       title: 'The Problem',
       content:
-        <div className="columns col-md">
+        <div className="columns cols-lg">
           <div className="column col-md-12 col-6">
-            <img src={placeholder} alt="Problem Description" className="img-fill" />
+            <img src={socialmap} alt="A Map of Social Media" className="img-fill" />
           </div>
           <div className="column col-md-12 col-6 flex flex-center">
             <div className="column col-sm-12 col-8">
@@ -50,7 +51,7 @@ export default {
     {
       id: 'review',
       title: 'Market Research',
-      content: <div>Hello</div>,
+      content: <div />,
       subsections: [
         {
           id: 'tableau',
