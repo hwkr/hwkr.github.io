@@ -86,7 +86,7 @@ export default class Project extends Component {
           {this.renderSidenavToc(project.sections)}
         </div>
         <section className="hero">{project.hero}</section>
-        <section className="front-matter container fill-full-page">
+        <section id="front-matter" className="front-matter container fill-full-page">
           <div className="columns cols-md">
             <div className="column col-12">
               <h2>Contents</h2>
@@ -97,7 +97,7 @@ export default class Project extends Component {
               {this.renderToc(project.sections)}
             </div>
             <div className="column col-md-12 col-8">
-              Lorem ipsum
+              {project.frontmatter}
             </div>
           </div>
         </section>

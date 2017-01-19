@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Icon from 'parts/Icon';
+import { Link } from 'react-scroll';
 
 // Images
 const Logo = require('img/portfolio/socialcompass/logo-color.svg');
@@ -19,7 +20,14 @@ export default {
         </h1>
       </div>
       <div className="read-more">
-        <a className="btn btn-link btn-more">Read more<br /><Icon name="arrow-down" /></a>
+        <Link className="btn btn-link btn-more" to="front-matter" smooth>Read more<br /><Icon name="arrow-down" /></Link>
+      </div>
+    </div>,
+  frontmatter:
+    <div className="flex flex-justify-center">
+      <div className="column col-gutterless col-sm-12 col-8">
+        <p>SocialCompass aims to help analysts navigate data and discover insights.</p>
+        <p>SocialCompass builds on many of the concepts and ideas used in existing social media analytics tools but provides a more bottom-up and interactive approach for exploring large data sets.</p>
       </div>
     </div>,
   sections: [
