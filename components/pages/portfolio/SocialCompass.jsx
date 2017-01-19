@@ -5,6 +5,7 @@ import Icon from 'parts/Icon';
 // Images
 const Logo = require('img/portfolio/socialcompass/logo-color.svg');
 const ChiselLogo = require('img/portfolio/socialcompass/chisel-logo.svg');
+const placeholder = require('img/portfolio/placeholder.svg');
 
 export default {
   title: 'Social Compass',
@@ -25,7 +26,15 @@ export default {
     {
       id: 'problem',
       title: 'The Problem',
-      content: <div>Hello</div>,
+      content:
+        <div className="columns col-md">
+          <div className="column col-6">
+            <img src={placeholder} />
+          </div>
+          <div className="column col-6 flex flex-center">
+            Blurb
+          </div>
+        </div>,
     },
     {
       id: 'review',

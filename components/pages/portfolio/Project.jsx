@@ -68,10 +68,8 @@ export default class Project extends Component {
     return (
       <div>
         {sections.map((section) =>
-          <section key={section.id} id={section.id} className="fill-full-page">
-            <div className="container">
-              <h2>{section.title}</h2>
-            </div>
+          <section key={section.id} id={section.id} className="project-section">
+            {section.content}
             {this.renderSections(section.subsections)}
           </section>
         )}
@@ -88,17 +86,17 @@ export default class Project extends Component {
           {this.renderSidenavToc(project.sections)}
         </div>
         <section className="hero">{project.hero}</section>
-        <section className="contents container fill-full-page">
+        <section className="front-matter container fill-full-page">
           <div className="columns cols-md">
             <div className="column col-12">
               <h2>Contents</h2>
             </div>
           </div>
           <div className="columns cols-md">
-            <div className="column col-4">
+            <div className="column col-md-12 col-4 hide-md">
               {this.renderToc(project.sections)}
             </div>
-            <div className="column col-8">
+            <div className="column col-md-12 col-8">
               Lorem ipsum
             </div>
           </div>
