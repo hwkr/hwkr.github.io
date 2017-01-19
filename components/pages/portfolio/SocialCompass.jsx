@@ -50,47 +50,55 @@ export default {
     },
     {
       id: 'review',
-      title: 'Market Research',
-      content: <div />,
+      title: 'Research',
+      content:
+        <div className="container">Exisiting Tools</div>,
       subsections: [
         {
           id: 'tableau',
           title: 'Tableau',
-          content: <div>Hello</div>,
+          content:
+            <div className="container">Tableau</div>,
         },
         {
           id: 'cascade',
           title: 'Cascade',
-          content: <div>Hello</div>,
+          content:
+            <div className="container">Cascade</div>,
         },
         {
           id: 'palantir',
           title: 'Palantir',
-          content: <div>Hello</div>,
+          content:
+            <div className="container">Palantir</div>,
         },
       ],
     },
     {
       id: 'design',
       title: 'Proposed Design',
-      content: <div>Hello</div>,
+      content:
+        <div className="container">Proposed Design</div>,
       subsections: [
         {
           id: 'feedback',
           title: 'Instant Feedback',
-          content: <div>Hello</div>,
+          content:
+            <div className="container">Instant Feedback</div>,
         },
         {
           id: 'user-driven',
           title: 'User-Driven Exploration',
-          content: <div>Hello</div>,
+          content:
+            <div className="container">User Driven Exploration</div>,
         },
       ],
     },
     {
       id: 'forward',
       title: 'Looking Forward',
-      content: <div>Hello</div>,
+      content:
+        <div className="container">Looking forward</div>,
     },
   ],
 };
