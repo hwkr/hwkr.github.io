@@ -86,18 +86,20 @@ export default class Project extends Component {
           {this.renderSidenavToc(project.sections)}
         </div>
         <section className="hero">{project.hero}</section>
-        <section id="front-matter" className="front-matter container fill-full-page">
-          <div className="columns cols-md">
-            <div className="column col-12">
-              <h2>Contents</h2>
+        <section id="front-matter" className="front-matter">
+          <div className="container">
+            <div className="columns cols-md">
+              <div className="column col-12">
+                <h2>Contents</h2>
+              </div>
             </div>
-          </div>
-          <div className="columns cols-md">
-            <div className="column col-md-12 col-4 hide-md">
-              {this.renderToc(project.sections)}
-            </div>
-            <div className="column col-md-12 col-8">
-              {project.frontmatter}
+            <div className="columns cols-md">
+              <div className="column col-md-12 col-4 hide-md">
+                {this.renderToc(project.sections)}
+              </div>
+              <div className="column col-md-12 col-8">
+                {project.frontmatter}
+              </div>
             </div>
           </div>
         </section>
