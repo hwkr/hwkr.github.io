@@ -3,12 +3,39 @@
     position: absolute;
     bottom: @footer-height + @layout-gutter;
   }
+  .contents {
+    .toc {
+      list-style: none;
+      margin: 0;
+      li {
+        margin-top: @layout-padding/2;
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+      .btn {
+        padding: @layout-padding/4 0;
+      }
+      .toc {
+        margin-left: @layout-padding/2;
+        padding-left: @layout-padding/2;
+        margin-top: @layout-padding/2;
+        border-left: .2rem solid fade(@core-light-color, 20%);
+      }
+    }
+  }
 }
 
 .project-variant(@color){
   .button-variant(@color);
 
-  .sidenav .sidenav-list .btn.active:before {
+  .sidenav .toc .btn.active:before {
     background-color: @color;
+  }
+
+  .contents {
+    background-color: @color;
+    color: @core-light-color;
+    .button-variant(@core-light-color);
   }
 }

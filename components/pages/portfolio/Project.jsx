@@ -31,13 +31,29 @@ export default class Project extends Component {
     };
   }
 
-  renderToc = (sections) => {
+  renderSidenavToc = (sections) => {
     if (!sections) return null;
     return (
       <ol className="sidenav-list toc">
         {sections.map((section) =>
           <li key={section.id}>
             <Link className="btn btn-nav btn-sm" to={section.id} spy smooth>
+              <span>{section.title}</span>
+            </Link>
+            {this.renderSidenavToc(section.subsections)}
+          </li>
+        )}
+      </ol>
+    );
+  }
+
+  renderToc = (sections) => {
+    if (!sections) return null;
+    return (
+      <ol className="toc">
+        {sections.map((section) =>
+          <li key={section.id}>
+            <Link className="btn btn-nav" to={section.id} smooth>
               <span>{section.title}</span>
             </Link>
             {this.renderToc(section.subsections)}
@@ -69,7 +85,7 @@ export default class Project extends Component {
       <main className={classNames('project', project.id)}>
         <Helmet title={project.title} />
         <div className="sidenav">
-          {this.renderToc(project.sections)}
+          {this.renderSidenavToc(project.sections)}
         </div>
         <section className="hero">{project.hero}</section>
         <section className="contents container fill-full-page">
@@ -79,7 +95,12 @@ export default class Project extends Component {
             </div>
           </div>
           <div className="columns cols-md">
-            <div className="column col-6" />
+            <div className="column col-4">
+              {this.renderToc(project.sections)}
+            </div>
+            <div className="column col-8">
+              Lorem ipsum
+            </div>
           </div>
         </section>
         {this.renderSections(project.sections)}

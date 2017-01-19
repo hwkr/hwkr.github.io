@@ -84,6 +84,7 @@
     background: transparent;
     border-color: transparent;
     color: lighten(@body-font-color, 15%);
+    height: auto;
     &:focus,
     &:hover {
       background: transparent;
@@ -260,11 +261,11 @@
     &.btn-nav {
       background: transparent;
       border-color: transparent;
-      color: lighten(@body-font-color, 15%);
+      color: desaturate(@color,  100%);
       &:focus,
       &:hover {
         background: transparent;
-        color: darken(@body-font-color, 10%);
+        color: darken(desaturate(@color,  100%), 20%);
       }
       &:active,
       &.active {
