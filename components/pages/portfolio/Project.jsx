@@ -73,7 +73,7 @@ export default class Project extends Component {
     return (
       <div>
         {sections.map((section) =>
-          <section key={section.id} id={section.id} className="project-section">
+          <section key={section.id} id={section.id} className={classNames('project-section', { 'project-tight': section.tight })}>
             {section.content}
             {this.renderSections(section.subsections)}
             <Waypoint scrollableAncestor={window} onEnter={this.showSidenav} />

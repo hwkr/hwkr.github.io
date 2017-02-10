@@ -6,7 +6,7 @@ import { Link } from 'react-scroll';
 // Images
 const Logo = require('img/portfolio/socialcompass/logo-color.svg');
 const ChiselLogo = require('img/portfolio/socialcompass/chisel-logo.svg');
-const socialmap = require('img/portfolio/socialcompass/social-map.png');
+const socialgraph = require('img/portfolio/socialcompass/social-graph.svg');
 // const placeholder = require('img/portfolio/placeholder.svg');
 
 export default {
@@ -35,13 +35,12 @@ export default {
     {
       id: 'problem',
       title: 'The Problem',
+      tight: true,
       content:
-        <div className="columns cols-lg">
-          <div className="column col-md-12 col-6">
-            <img src={socialmap} alt="A Map of Social Media" className="img-fill" />
-          </div>
+        <div className="columns problem fill-full-page" style={{ backgroundImage: `url(${socialgraph})` }}>
+          <div className="column col-md-12 col-6" />
           <div className="column col-md-12 col-6 flex flex-center">
-            <div className="column col-sm-12 col-8">
+            <div className="column col-md-12 col-10">
               <p>SocialCompass aims to help analysts navigate data and discover insights.</p>
               <p>SocialCompass builds on many of the concepts and ideas used in existing social media analytics tools but provides a more bottom-up and interactive approach for exploring large data sets.</p>
             </div>
@@ -52,7 +51,14 @@ export default {
       id: 'review',
       title: 'Research',
       content:
-        <div className="container">Exisiting Tools</div>,
+        <div className="container">
+          <div className="flex flex-center">
+            <div>
+              <h2 className="text-center">Market Research</h2>
+              <p className="block-xs">We began by doing an analysis of current tools on the market being used by analysts to analyze social media and large data sets. We also looked at a number of prototype tools that were still in development.</p>
+            </div>
+          </div>
+        </div>,
       subsections: [
         {
           id: 'tableau',

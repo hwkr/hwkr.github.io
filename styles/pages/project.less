@@ -27,10 +27,32 @@
     }
   }
   .project-section {
-    padding-top: @layout-padding*4;
-    padding-bottom: @layout-padding*4;
+    padding-top: @layout-padding*3;
+    padding-bottom: @layout-padding*3;
+    &.project-tight {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
     .container {
+      // Pad for sidenav on desktop
       padding-left: @sidenav-width;
+      padding-right: @sidenav-width;
+    }
+
+    @media screen and (max-width: @size-md ) {
+      padding-top: @layout-padding*2;
+      padding-bottom: @layout-padding*2;
+
+      &.project-tight {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .container {
+        padding-left: @layout-gutter;
+        padding-right: @layout-gutter;
+      }
     }
   }
 }
