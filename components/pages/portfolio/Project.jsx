@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-scroll';
 
+import Waypoint from 'react-waypoint';
 import Helmet from 'react-helmet';
 import classNames from 'classnames';
 
@@ -28,8 +29,12 @@ export default class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showSidenav: false,
     };
   }
+
+  showSidenav = () => { this.setState({ showSidenav: true }); }
+  hideSidenav = () => { this.setState({ showSidenav: false }); }
 
   renderSidenavToc = (sections) => {
     if (!sections) return null;
@@ -71,6 +76,7 @@ export default class Project extends Component {
           <section key={section.id} id={section.id} className="project-section">
             {section.content}
             {this.renderSections(section.subsections)}
+            <Waypoint scrollableAncestor={window} onEnter={this.showSidenav} />
           </section>
         )}
       </div>
@@ -79,10 +85,11 @@ export default class Project extends Component {
 
   render() {
     const { project } = this.props.route;
+    const { showSidenav } = this.state;
     return (
       <main className={classNames('project', project.id)}>
         <Helmet title={project.title} />
-        <div className="sidenav">
+        <div className={classNames('sidenav', 'slide', { active: showSidenav })}>
           {this.renderSidenavToc(project.sections)}
         </div>
         <section className="hero">{project.hero}</section>
@@ -99,6 +106,7 @@ export default class Project extends Component {
               </div>
               <div className="column col-md-12 col-8">
                 {project.frontmatter}
+                <Waypoint scrollableAncestor={window} onEnter={this.hideSidenav} />
               </div>
             </div>
           </div>
